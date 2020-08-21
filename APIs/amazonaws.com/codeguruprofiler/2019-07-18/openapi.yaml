@@ -1,0 +1,1095 @@
+openapi: 3.0.0
+info:
+  version: '2019-07-18'
+  x-release: v4
+  title: Amazon CodeGuru Profiler
+  description: This section provides documentation for the Amazon CodeGuru Profiler API operations.
+  x-logo:
+    url: 'https://twitter.com/awscloud/profile_image?size=original'
+    backgroundColor: '#FFFFFF'
+  termsOfService: 'https://aws.amazon.com/service-terms/'
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: 'https://github.com/mermade/aws2openapi'
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: 'http://www.apache.org/licenses/'
+  x-providerName: amazonaws.com
+  x-serviceName: codeguruprofiler
+  x-origin:
+    - contentType: application/json
+      url: 'https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/codeguruprofiler-2019-07-18.normal.json'
+      converter:
+        url: 'https://github.com/mermade/aws2openapi'
+        version: 1.0.0
+      x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: 'https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct'
+  x-apisguru-categories:
+    - cloud
+  x-preferred: true
+externalDocs:
+  description: Amazon Web Services documentation
+  url: 'https://docs.aws.amazon.com/codeguru-profiler/'
+servers:
+  - url: 'http://codeguru-profiler.{region}.amazonaws.com'
+    variables:
+      region:
+        description: The AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - us-gov-west-1
+          - us-gov-east-1
+          - ca-central-1
+          - eu-north-1
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-northeast-3
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-south-1
+          - sa-east-1
+        default: us-east-1
+    description: The Amazon CodeGuru Profiler multi-region endpoint
+  - url: 'https://codeguru-profiler.{region}.amazonaws.com'
+    variables:
+      region:
+        description: The AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-1
+          - us-west-2
+          - us-gov-west-1
+          - us-gov-east-1
+          - ca-central-1
+          - eu-north-1
+          - eu-west-1
+          - eu-west-2
+          - eu-west-3
+          - eu-central-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-northeast-3
+          - ap-southeast-1
+          - ap-southeast-2
+          - ap-south-1
+          - sa-east-1
+        default: us-east-1
+    description: The Amazon CodeGuru Profiler multi-region endpoint
+  - url: 'http://codeguru-profiler.{region}.amazonaws.com.cn'
+    variables:
+      region:
+        description: The AWS region
+        enum:
+          - cn-north-1
+          - cn-northwest-1
+        default: cn-north-1
+    description: The Amazon CodeGuru Profiler endpoint for China (Beijing) and China (Ningxia)
+  - url: 'https://codeguru-profiler.{region}.amazonaws.com.cn'
+    variables:
+      region:
+        description: The AWS region
+        enum:
+          - cn-north-1
+          - cn-northwest-1
+        default: cn-north-1
+    description: The Amazon CodeGuru Profiler endpoint for China (Beijing) and China (Ningxia)
+x-hasEquivalentPaths: true
+paths:
+  '/profilingGroups/{profilingGroupName}/configureAgent':
+    post:
+      operationId: ConfigureAgent
+      description: <p/>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConfigureAgentResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: <p/>
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                fleetInstanceId:
+                  description: <p/>
+                  type: string
+                  pattern: '^[\w-.:/]+$'
+                  minLength: 1
+                  maxLength: 255
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+  '/profilingGroups#clientToken':
+    post:
+      operationId: CreateProfilingGroup
+      description: Creates a profiling group.
+      responses:
+        '201':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateProfilingGroupResponse'
+        '480':
+          description: ServiceQuotaExceededException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServiceQuotaExceededException'
+        '481':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '482':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+        '483':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '484':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+      parameters:
+        - name: clientToken
+          in: query
+          required: true
+          description: '<p>Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.</p> <p>This parameter specifies a unique identifier for the new profiling group that helps ensure idempotency.</p>'
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 64
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - profilingGroupName
+              properties:
+                agentOrchestrationConfig:
+                  description: <p/>
+                  type: object
+                  properties:
+                    profilingEnabled:
+                      $ref: '#/components/schemas/Boolean'
+                      description: <p/>
+                profilingGroupName:
+                  description: The name of the profiling group.
+                  type: string
+                  pattern: '^[\w-]+$'
+                  minLength: 1
+                  maxLength: 255
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+  '/profilingGroups/{profilingGroupName}':
+    delete:
+      operationId: DeleteProfilingGroup
+      description: Deletes a profiling group.
+      responses:
+        '204':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteProfilingGroupResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: The profiling group name to delete.
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    get:
+      operationId: DescribeProfilingGroup
+      description: Describes a profiling group.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeProfilingGroupResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: The profiling group name.
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+    put:
+      operationId: UpdateProfilingGroup
+      description: Updates a profiling group.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdateProfilingGroupResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ConflictException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConflictException'
+        '482':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '484':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: The name of the profiling group to update.
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - agentOrchestrationConfig
+              properties:
+                agentOrchestrationConfig:
+                  description: <p/>
+                  type: object
+                  properties:
+                    profilingEnabled:
+                      $ref: '#/components/schemas/Boolean'
+                      description: <p/>
+  '/profilingGroups/{profilingGroupName}/profile':
+    get:
+      operationId: GetProfile
+      description: '<p>Gets the aggregated profile of a profiling group for the specified time range. If the requested time range does not align with the available aggregated profiles, it is expanded to attain alignment. If aggregated profiles are available only for part of the period requested, the profile is returned from the earliest available to the latest within the requested time range. </p> <p>For example, if the requested time range is from 00:00 to 00:20 and the available profiles are from 00:15 to 00:25, the returned profile will be from 00:15 to 00:20. </p> <p>You must specify exactly two of the following parameters: <code>startTime</code>, <code>period</code>, and <code>endTime</code>. </p>'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetProfileResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: Accept
+          in: header
+          required: false
+          description: 'The format of the profile to return. You can choose <code>application/json</code> or the default <code>application/x-amzn-ion</code>. '
+          schema:
+            type: string
+        - name: endTime
+          in: query
+          required: false
+          description: '<p/> <p>You must specify exactly two of the following parameters: <code>startTime</code>, <code>period</code>, and <code>endTime</code>. </p>'
+          schema:
+            type: string
+            format: date-time
+        - name: maxDepth
+          in: query
+          required: false
+          description: The maximum depth of the graph.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 10000
+        - name: period
+          in: query
+          required: false
+          description: '<p>The period of the profile to get. The time range must be in the past and not longer than one week. </p> <p>You must specify exactly two of the following parameters: <code>startTime</code>, <code>period</code>, and <code>endTime</code>. </p>'
+          schema:
+            type: string
+            minLength: 1
+            maxLength: 64
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: The name of the profiling group to get.
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+        - name: startTime
+          in: query
+          required: false
+          description: '<p>The start time of the profile to get.</p> <p>You must specify exactly two of the following parameters: <code>startTime</code>, <code>period</code>, and <code>endTime</code>. </p>'
+          schema:
+            type: string
+            format: date-time
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+  '/profilingGroups/{profilingGroupName}/profileTimes#endTime&period&startTime':
+    get:
+      operationId: ListProfileTimes
+      description: List the start times of the available aggregated profiles of a profiling group for an aggregation period within the specified time range.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListProfileTimesResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: endTime
+          in: query
+          required: true
+          description: The end time of the time range from which to list the profiles.
+          schema:
+            type: string
+            format: date-time
+        - name: maxResults
+          in: query
+          required: false
+          description: 'The maximum number of profile time results returned by <code>ListProfileTimes</code> in paginated output. When this parameter is used, <code>ListProfileTimes</code> only returns <code>maxResults</code> results in a single page with a <code>nextToken</code> response element. The remaining results of the initial request can be seen by sending another <code>ListProfileTimes</code> request with the returned <code>nextToken</code> value. '
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: nextToken
+          in: query
+          required: false
+          description: <p>The <code>nextToken</code> value returned from a previous paginated <code>ListProfileTimes</code> request where <code>maxResults</code> was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the <code>nextToken</code> value. </p> <note> <p>This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes.</p> </note>
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 64
+        - name: orderBy
+          in: query
+          required: false
+          description: 'The order (ascending or descending by start time of the profile) to use when listing profiles. Defaults to <code>TIMESTAMP_DESCENDING</code>. '
+          schema:
+            type: string
+            enum:
+              - TimestampAscending
+              - TimestampDescending
+        - name: period
+          in: query
+          required: true
+          description: The aggregation period.
+          schema:
+            type: string
+            enum:
+              - P1D
+              - PT1H
+              - PT5M
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: The name of the profiling group.
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+        - name: startTime
+          in: query
+          required: true
+          description: The start time of the time range from which to list the profiles.
+          schema:
+            type: string
+            format: date-time
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+  /profilingGroups:
+    get:
+      operationId: ListProfilingGroups
+      description: Lists profiling groups.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListProfilingGroupsResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+      parameters:
+        - name: includeDescription
+          in: query
+          required: false
+          description: A Boolean value indicating whether to include a description.
+          schema:
+            type: boolean
+        - name: maxResults
+          in: query
+          required: false
+          description: 'The maximum number of profiling groups results returned by <code>ListProfilingGroups</code> in paginated output. When this parameter is used, <code>ListProfilingGroups</code> only returns <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. The remaining results of the initial request can be seen by sending another <code>ListProfilingGroups</code> request with the returned <code>nextToken</code> value. '
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 1000
+        - name: nextToken
+          in: query
+          required: false
+          description: <p>The <code>nextToken</code> value returned from a previous paginated <code>ListProfilingGroups</code> request where <code>maxResults</code> was used and the results exceeded the value of that parameter. Pagination continues from the end of the previous results that returned the <code>nextToken</code> value. </p> <note> <p>This token should be treated as an opaque identifier that is only used to retrieve the next items in a list and not for other programmatic purposes.</p> </note>
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 64
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+  '/profilingGroups/{profilingGroupName}/agentProfile#Content-Type':
+    post:
+      operationId: PostAgentProfile
+      description: <p/>
+      responses:
+        '204':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAgentProfileResponse'
+        '480':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '481':
+          description: ValidationException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+      parameters:
+        - name: Content-Type
+          in: header
+          required: true
+          description: <p/>
+          schema:
+            type: string
+        - name: profileToken
+          in: query
+          required: false
+          description: <p/>
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 64
+        - name: profilingGroupName
+          in: path
+          required: true
+          description: <p/>
+          schema:
+            type: string
+            pattern: '^[\w-]+$'
+            minLength: 1
+            maxLength: 255
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - agentProfile
+              properties:
+                agentProfile:
+                  description: <p/>
+                  type: string
+    parameters:
+      - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+      - $ref: '#/components/parameters/X-Amz-Date'
+      - $ref: '#/components/parameters/X-Amz-Algorithm'
+      - $ref: '#/components/parameters/X-Amz-Credential'
+      - $ref: '#/components/parameters/X-Amz-Security-Token'
+      - $ref: '#/components/parameters/X-Amz-Signature'
+      - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+  schemas:
+    ConfigureAgentResponse:
+      type: object
+      required:
+        - configuration
+      properties:
+        configuration:
+          $ref: '#/components/schemas/AgentConfiguration'
+          description: <p/>
+      description: The structure representing the configureAgentResponse.
+    InternalServerException: {}
+    ValidationException: {}
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
+    CreateProfilingGroupResponse:
+      type: object
+      required:
+        - profilingGroup
+      properties:
+        profilingGroup:
+          $ref: '#/components/schemas/ProfilingGroupDescription'
+          description: Information about the new profiling group
+      description: The structure representing the createProfilingGroupResponse.
+    Boolean:
+      type: boolean
+    ServiceQuotaExceededException: {}
+    ConflictException: {}
+    DeleteProfilingGroupResponse:
+      type: object
+      properties: {}
+      description: The structure representing the deleteProfilingGroupResponse.
+    DescribeProfilingGroupResponse:
+      type: object
+      required:
+        - profilingGroup
+      properties:
+        profilingGroup:
+          $ref: '#/components/schemas/ProfilingGroupDescription'
+          description: Information about a profiling group.
+      description: The structure representing the describeProfilingGroupResponse.
+    GetProfileResponse:
+      type: object
+      required:
+        - profile
+      properties:
+        profile:
+          $ref: '#/components/schemas/AggregatedProfile'
+          description: Information about the profile.
+      description: The structure representing the getProfileResponse.
+    ListProfileTimesResponse:
+      type: object
+      required:
+        - profileTimes
+      properties:
+        nextToken:
+          $ref: '#/components/schemas/PaginationToken'
+          description: 'The <code>nextToken</code> value to include in a future <code>ListProfileTimes</code> request. When the results of a <code>ListProfileTimes</code> request exceed <code>maxResults</code>, this value can be used to retrieve the next page of results. This value is <code>null</code> when there are no more results to return. '
+        profileTimes:
+          $ref: '#/components/schemas/ProfileTimes'
+          description: 'The list of start times of the available profiles for the aggregation period in the specified time range. '
+      description: The structure representing the listProfileTimesResponse.
+    ListProfilingGroupsResponse:
+      type: object
+      required:
+        - profilingGroupNames
+      properties:
+        nextToken:
+          $ref: '#/components/schemas/PaginationToken'
+          description: 'The <code>nextToken</code> value to include in a future <code>ListProfilingGroups</code> request. When the results of a <code>ListProfilingGroups</code> request exceed <code>maxResults</code>, this value can be used to retrieve the next page of results. This value is <code>null</code> when there are no more results to return. '
+        profilingGroupNames:
+          $ref: '#/components/schemas/ProfilingGroupNames'
+          description: Information about profiling group names.
+        profilingGroups:
+          $ref: '#/components/schemas/ProfilingGroupDescriptions'
+          description: Information about profiling groups.
+      description: The structure representing the listProfilingGroupsResponse.
+    PostAgentProfileResponse:
+      type: object
+      properties: {}
+      description: The structure representing the postAgentProfileResponse.
+    UpdateProfilingGroupResponse:
+      type: object
+      required:
+        - profilingGroup
+      properties:
+        profilingGroup:
+          $ref: '#/components/schemas/ProfilingGroupDescription'
+          description: Updated information about the profiling group.
+      description: The structure representing the updateProfilingGroupResponse.
+    Integer:
+      type: integer
+    AgentConfiguration:
+      type: object
+      required:
+        - periodInSeconds
+        - shouldProfile
+      properties:
+        periodInSeconds:
+          $ref: '#/components/schemas/Integer'
+          description: <p/>
+        shouldProfile:
+          $ref: '#/components/schemas/Boolean'
+          description: <p/>
+      description: <p/>
+    AgentOrchestrationConfig:
+      type: object
+      required:
+        - profilingEnabled
+      properties:
+        profilingEnabled:
+          $ref: '#/components/schemas/Boolean'
+          description: <p/>
+      description: <p/>
+    AgentProfile:
+      type: string
+    AggregatedProfile:
+      type: string
+    AggregationPeriod:
+      type: string
+      enum:
+        - P1D
+        - PT1H
+        - PT5M
+    Timestamp:
+      type: string
+      format: date-time
+    AggregatedProfileTime:
+      type: object
+      properties:
+        period:
+          $ref: '#/components/schemas/AggregationPeriod'
+          description: The time period.
+        start:
+          $ref: '#/components/schemas/Timestamp'
+          description: The start time.
+      description: Information about the time range of the latest available aggregated profile.
+    ClientToken:
+      type: string
+      pattern: '^[\w-]+$'
+      minLength: 1
+      maxLength: 64
+    FleetInstanceId:
+      type: string
+      pattern: '^[\w-.:/]+$'
+      minLength: 1
+      maxLength: 255
+    ProfilingGroupName:
+      type: string
+      pattern: '^[\w-]+$'
+      minLength: 1
+      maxLength: 255
+    ConfigureAgentRequest:
+      type: object
+      title: ConfigureAgentRequest
+      properties:
+        fleetInstanceId:
+          $ref: '#/components/schemas/FleetInstanceId'
+          description: <p/>
+      description: The structure representing the configureAgentRequest.
+    CreateProfilingGroupRequest:
+      type: object
+      required:
+        - profilingGroupName
+      title: CreateProfilingGroupRequest
+      properties:
+        agentOrchestrationConfig:
+          $ref: '#/components/schemas/AgentOrchestrationConfig'
+          description: The agent orchestration configuration.
+        profilingGroupName:
+          $ref: '#/components/schemas/ProfilingGroupName'
+          description: The name of the profiling group.
+      description: The structure representing the createProfiliingGroupRequest.
+    ProfilingGroupDescription:
+      type: object
+      properties:
+        agentOrchestrationConfig:
+          $ref: '#/components/schemas/AgentOrchestrationConfig'
+          description: <p/>
+        arn:
+          $ref: '#/components/schemas/ProfilingGroupArn'
+          description: The Amazon Resource Name (ARN) identifying the profiling group.
+        createdAt:
+          $ref: '#/components/schemas/Timestamp'
+          description: 'The time, in milliseconds since the epoch, when the profiling group was created.'
+        name:
+          $ref: '#/components/schemas/ProfilingGroupName'
+          description: The name of the profiling group.
+        profilingStatus:
+          $ref: '#/components/schemas/ProfilingStatus'
+          description: The status of the profiling group.
+        updatedAt:
+          $ref: '#/components/schemas/Timestamp'
+          description: 'The time, in milliseconds since the epoch, when the profiling group was last updated.'
+      description: The description of a profiling group.
+    DeleteProfilingGroupRequest:
+      type: object
+      title: DeleteProfilingGroupRequest
+      properties: {}
+      description: The structure representing the deleteProfilingGroupRequest.
+    DescribeProfilingGroupRequest:
+      type: object
+      title: DescribeProfilingGroupRequest
+      properties: {}
+      description: The structure representing the describeProfilingGroupRequest.
+    String:
+      type: string
+    MaxDepth:
+      type: integer
+      minimum: 1
+      maximum: 10000
+    Period:
+      type: string
+      minLength: 1
+      maxLength: 64
+    GetProfileRequest:
+      type: object
+      title: GetProfileRequest
+      properties: {}
+      description: The structure representing the getProfileRequest.
+    MaxResults:
+      type: integer
+      minimum: 1
+      maximum: 1000
+    PaginationToken:
+      type: string
+      pattern: '^[\w-]+$'
+      minLength: 1
+      maxLength: 64
+    OrderBy:
+      type: string
+      enum:
+        - TimestampAscending
+        - TimestampDescending
+    ListProfileTimesRequest:
+      type: object
+      title: ListProfileTimesRequest
+      properties: {}
+      description: The structure representing the listProfileTimesRequest.
+    ProfileTimes:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProfileTime'
+    ListProfilingGroupsRequest:
+      type: object
+      title: ListProfilingGroupsRequest
+      properties: {}
+      description: The structure representing the listProfilingGroupsRequest.
+    ProfilingGroupNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProfilingGroupName'
+    ProfilingGroupDescriptions:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProfilingGroupDescription'
+    PostAgentProfileRequest:
+      type: object
+      required:
+        - agentProfile
+      title: PostAgentProfileRequest
+      properties:
+        agentProfile:
+          $ref: '#/components/schemas/AgentProfile'
+          description: <p/>
+      description: The structure representing the postAgentProfileRequest.
+    ProfileTime:
+      type: object
+      properties:
+        start:
+          $ref: '#/components/schemas/Timestamp'
+          description: The start time of the profile.
+      description: Information about the profile time.
+    ProfilingGroupArn:
+      type: string
+    ProfilingStatus:
+      type: object
+      properties:
+        latestAgentOrchestratedAt:
+          $ref: '#/components/schemas/Timestamp'
+          description: 'The time, in milliseconds since the epoch, when the latest agent was orchestrated.'
+        latestAgentProfileReportedAt:
+          $ref: '#/components/schemas/Timestamp'
+          description: 'The time, in milliseconds since the epoch, when the latest agent was reported..'
+        latestAggregatedProfile:
+          $ref: '#/components/schemas/AggregatedProfileTime'
+          description: The latest aggregated profile
+      description: Information about the profiling status.
+    UpdateProfilingGroupRequest:
+      type: object
+      required:
+        - agentOrchestrationConfig
+      title: UpdateProfilingGroupRequest
+      properties:
+        agentOrchestrationConfig:
+          $ref: '#/components/schemas/AgentOrchestrationConfig'
+          description: <p/>
+      description: The structure representing the updateProfilingGroupRequest.
+security:
+  - hmac: []

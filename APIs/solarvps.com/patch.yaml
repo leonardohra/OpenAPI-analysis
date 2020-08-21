@@ -1,0 +1,10 @@
+info:
+  x-logo:
+    url: 'https://twitter.com/solarvps/profile_image?size=original'
+  x-apisguru-categories:
+    - hosting
+securityDefinitions:
+  apiKey:
+    type: apiKey
+    name: api_key
+    in: query

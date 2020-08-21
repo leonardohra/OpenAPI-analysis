@@ -1,0 +1,972 @@
+LDA,2,5,0,0.03 * delete + 0.02 * return + 0.02 * give + 0.02 * create + 0.02 * project
+LDA,2,5,1,0.05 * list + 0.03 * create + 0.02 * user + 0.02 * update + 0.02 * retrieve
+LDA,2,6,0,0.03 * delete + 0.02 * return + 0.02 * give + 0.02 * create + 0.02 * project + 0.01 * item
+LDA,2,6,1,0.05 * list + 0.03 * create + 0.02 * user + 0.02 * update + 0.02 * retrieve + 0.02 * get
+LDA,2,7,0,0.03 * delete + 0.02 * return + 0.02 * give + 0.02 * create + 0.02 * project + 0.01 * item + 0.01 * list
+LDA,2,7,1,0.05 * list + 0.03 * create + 0.02 * user + 0.02 * update + 0.02 * retrieve + 0.02 * get + 0.01 * search
+LDA,2,8,0,0.03 * delete + 0.02 * return + 0.02 * give + 0.02 * create + 0.02 * project + 0.01 * item + 0.01 * list + 0.01 * order
+LDA,2,8,1,0.05 * list + 0.03 * create + 0.02 * user + 0.02 * update + 0.02 * retrieve + 0.02 * get + 0.01 * search + 0.01 * information
+LDA,2,9,0,0.03 * delete + 0.02 * return + 0.02 * give + 0.02 * create + 0.02 * project + 0.01 * item + 0.01 * list + 0.01 * order + 0.01 * entry
+LDA,2,9,1,0.05 * list + 0.03 * create + 0.02 * user + 0.02 * update + 0.02 * retrieve + 0.02 * get + 0.01 * search + 0.01 * information + 0.01 * specify
+LDA,2,10,0,0.03 * delete + 0.02 * return + 0.02 * give + 0.02 * create + 0.02 * project + 0.01 * item + 0.01 * list + 0.01 * order + 0.01 * entry + 0.01 * type
+LDA,2,10,1,0.05 * list + 0.03 * create + 0.02 * user + 0.02 * update + 0.02 * retrieve + 0.02 * get + 0.01 * search + 0.01 * information + 0.01 * specify + 0.01 * schedule
+LSA,2,5,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create
+LSA,2,5,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update
+LSA,2,6,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource
+LSA,2,6,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify
+LSA,2,7,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user
+LSA,2,7,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric
+LSA,2,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,2,8,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource
+LSA,2,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,2,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,2,10,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group + 0.08 * subscription
+LSA,2,10,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new + 0.10 * delete
+NMF,2,5,0,0.08 * service + 0.06 * create + 0.03 * update + 0.03 * specify + 0.02 * delete
+NMF,2,5,1,0.11 * list + 0.07 * get + 0.02 * specify + 0.02 * group + 0.02 * give
+NMF,2,6,0,0.08 * service + 0.06 * create + 0.03 * update + 0.03 * specify + 0.02 * delete + 0.02 * account
+NMF,2,6,1,0.11 * list + 0.07 * get + 0.02 * specify + 0.02 * group + 0.02 * give + 0.01 * user
+NMF,2,7,0,0.08 * service + 0.06 * create + 0.03 * update + 0.03 * specify + 0.02 * delete + 0.02 * account + 0.02 * new
+NMF,2,7,1,0.11 * list + 0.07 * get + 0.02 * specify + 0.02 * group + 0.02 * give + 0.01 * user + 0.01 * resource
+NMF,2,8,0,0.08 * service + 0.06 * create + 0.03 * update + 0.03 * specify + 0.02 * delete + 0.02 * account + 0.02 * new + 0.02 * fabric
+NMF,2,8,1,0.11 * list + 0.07 * get + 0.02 * specify + 0.02 * group + 0.02 * give + 0.01 * user + 0.01 * resource + 0.01 * specific
+NMF,2,9,0,0.08 * service + 0.06 * create + 0.03 * update + 0.03 * specify + 0.02 * delete + 0.02 * account + 0.02 * new + 0.02 * fabric + 0.01 * type
+NMF,2,9,1,0.11 * list + 0.07 * get + 0.02 * specify + 0.02 * group + 0.02 * give + 0.01 * user + 0.01 * resource + 0.01 * specific + 0.01 * key
+NMF,2,10,0,0.08 * service + 0.06 * create + 0.03 * update + 0.03 * specify + 0.02 * delete + 0.02 * account + 0.02 * new + 0.02 * fabric + 0.01 * type + 0.01 * exist
+NMF,2,10,1,0.11 * list + 0.07 * get + 0.02 * specify + 0.02 * group + 0.02 * give + 0.01 * user + 0.01 * resource + 0.01 * specific + 0.01 * key + 0.01 * cluster
+LDA,3,5,0,0.03 * delete + 0.03 * return + 0.02 * item + 0.02 * order + 0.02 * entry
+LDA,3,5,1,0.04 * create + 0.03 * user + 0.03 * update + 0.02 * get + 0.02 * search
+LDA,3,5,2,0.09 * list + 0.05 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information
+LDA,3,6,0,0.03 * delete + 0.03 * return + 0.02 * item + 0.02 * order + 0.02 * entry + 0.02 * would
+LDA,3,6,1,0.04 * create + 0.03 * user + 0.03 * update + 0.02 * get + 0.02 * search + 0.01 * schedule
+LDA,3,6,2,0.09 * list + 0.05 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific
+LDA,3,7,0,0.03 * delete + 0.03 * return + 0.02 * item + 0.02 * order + 0.02 * entry + 0.02 * would + 0.02 * give
+LDA,3,7,1,0.04 * create + 0.03 * user + 0.03 * update + 0.02 * get + 0.02 * search + 0.01 * schedule + 0.01 * add
+LDA,3,7,2,0.09 * list + 0.05 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service
+LDA,3,8,0,0.03 * delete + 0.03 * return + 0.02 * item + 0.02 * order + 0.02 * entry + 0.02 * would + 0.02 * give + 0.01 * tag
+LDA,3,8,1,0.04 * create + 0.03 * user + 0.03 * update + 0.02 * get + 0.02 * search + 0.01 * schedule + 0.01 * add + 0.01 * stream
+LDA,3,8,2,0.09 * list + 0.05 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service + 0.02 * group
+LDA,3,9,0,0.03 * delete + 0.03 * return + 0.02 * item + 0.02 * order + 0.02 * entry + 0.02 * would + 0.02 * give + 0.01 * tag + 0.01 * create
+LDA,3,9,1,0.04 * create + 0.03 * user + 0.03 * update + 0.02 * get + 0.02 * search + 0.01 * schedule + 0.01 * add + 0.01 * stream + 0.01 * new
+LDA,3,9,2,0.09 * list + 0.05 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service + 0.02 * group + 0.01 * get
+LDA,3,10,0,0.03 * delete + 0.03 * return + 0.02 * item + 0.02 * order + 0.02 * entry + 0.02 * would + 0.02 * give + 0.01 * tag + 0.01 * create + 0.01 * file
+LDA,3,10,1,0.04 * create + 0.03 * user + 0.03 * update + 0.02 * get + 0.02 * search + 0.01 * schedule + 0.01 * add + 0.01 * stream + 0.01 * new + 0.01 * list
+LDA,3,10,2,0.09 * list + 0.05 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service + 0.02 * group + 0.01 * get + 0.01 * delete
+LSA,3,5,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create
+LSA,3,5,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update
+LSA,3,5,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list
+LSA,3,6,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource
+LSA,3,6,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify
+LSA,3,6,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new
+LSA,3,7,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user
+LSA,3,7,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric
+LSA,3,7,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify
+LSA,3,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,3,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,3,8,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric
+LSA,3,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,3,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,3,9,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric + -0.07 * group
+LSA,3,10,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group + 0.08 * subscription
+LSA,3,10,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new + -0.10 * delete
+LSA,3,10,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric + -0.07 * group + -0.07 * user
+NMF,3,5,0,0.08 * specify + 0.06 * delete + 0.05 * list + 0.02 * get + 0.02 * account
+NMF,3,5,1,0.07 * create + 0.07 * update + 0.03 * user + 0.02 * would + 0.02 * new
+NMF,3,5,2,0.11 * list + 0.08 * get + 0.07 * service + 0.04 * subscription + 0.03 * resource
+NMF,3,6,0,0.08 * specify + 0.06 * delete + 0.05 * list + 0.02 * get + 0.02 * account + 0.02 * name
+NMF,3,6,1,0.07 * create + 0.07 * update + 0.03 * user + 0.02 * would + 0.02 * new + 0.02 * information
+NMF,3,6,2,0.11 * list + 0.08 * get + 0.07 * service + 0.04 * subscription + 0.03 * resource + 0.03 * group
+NMF,3,7,0,0.08 * specify + 0.06 * delete + 0.05 * list + 0.02 * get + 0.02 * account + 0.02 * name + 0.02 * key
+NMF,3,7,1,0.07 * create + 0.07 * update + 0.03 * user + 0.02 * would + 0.02 * new + 0.02 * information + 0.02 * give
+NMF,3,7,2,0.11 * list + 0.08 * get + 0.07 * service + 0.04 * subscription + 0.03 * resource + 0.03 * group + 0.02 * cluster
+NMF,3,8,0,0.08 * specify + 0.06 * delete + 0.05 * list + 0.02 * get + 0.02 * account + 0.02 * name + 0.02 * key + 0.02 * retrieve
+NMF,3,8,1,0.07 * create + 0.07 * update + 0.03 * user + 0.02 * would + 0.02 * new + 0.02 * information + 0.02 * give + 0.02 * service
+NMF,3,8,2,0.11 * list + 0.08 * get + 0.07 * service + 0.04 * subscription + 0.03 * resource + 0.03 * group + 0.02 * cluster + 0.02 * fabric
+NMF,3,9,0,0.08 * specify + 0.06 * delete + 0.05 * list + 0.02 * get + 0.02 * account + 0.02 * name + 0.02 * key + 0.02 * retrieve + 0.01 * use
+NMF,3,9,1,0.07 * create + 0.07 * update + 0.03 * user + 0.02 * would + 0.02 * new + 0.02 * information + 0.02 * give + 0.02 * service + 0.02 * specific
+NMF,3,9,2,0.11 * list + 0.08 * get + 0.07 * service + 0.04 * subscription + 0.03 * resource + 0.03 * group + 0.02 * cluster + 0.02 * fabric + 0.02 * create
+NMF,3,10,0,0.08 * specify + 0.06 * delete + 0.05 * list + 0.02 * get + 0.02 * account + 0.02 * name + 0.02 * key + 0.02 * retrieve + 0.01 * use + 0.01 * policy
+NMF,3,10,1,0.07 * create + 0.07 * update + 0.03 * user + 0.02 * would + 0.02 * new + 0.02 * information + 0.02 * give + 0.02 * service + 0.02 * specific + 0.01 * exist
+NMF,3,10,2,0.11 * list + 0.08 * get + 0.07 * service + 0.04 * subscription + 0.03 * resource + 0.03 * group + 0.02 * cluster + 0.02 * fabric + 0.02 * create + 0.01 * app
+LDA,4,5,0,0.04 * return + 0.03 * item + 0.02 * give + 0.02 * entry + 0.02 * would
+LDA,4,5,1,0.03 * get + 0.03 * search + 0.03 * user + 0.02 * list + 0.02 * stream
+LDA,4,5,2,0.10 * list + 0.04 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information
+LDA,4,5,3,0.09 * create + 0.06 * update + 0.05 * delete + 0.02 * payment + 0.02 * user
+LDA,4,6,0,0.04 * return + 0.03 * item + 0.02 * give + 0.02 * entry + 0.02 * would + 0.02 * tag
+LDA,4,6,1,0.03 * get + 0.03 * search + 0.03 * user + 0.02 * list + 0.02 * stream + 0.02 * retrieve
+LDA,4,6,2,0.10 * list + 0.04 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific
+LDA,4,6,3,0.09 * create + 0.06 * update + 0.05 * delete + 0.02 * payment + 0.02 * user + 0.02 * add
+LDA,4,7,0,0.04 * return + 0.03 * item + 0.02 * give + 0.02 * entry + 0.02 * would + 0.02 * tag + 0.02 * order
+LDA,4,7,1,0.03 * get + 0.03 * search + 0.03 * user + 0.02 * list + 0.02 * stream + 0.02 * retrieve + 0.02 * detail
+LDA,4,7,2,0.10 * list + 0.04 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service
+LDA,4,7,3,0.09 * create + 0.06 * update + 0.05 * delete + 0.02 * payment + 0.02 * user + 0.02 * add + 0.02 * new
+LDA,4,8,0,0.04 * return + 0.03 * item + 0.02 * give + 0.02 * entry + 0.02 * would + 0.02 * tag + 0.02 * order + 0.02 * pay
+LDA,4,8,1,0.03 * get + 0.03 * search + 0.03 * user + 0.02 * list + 0.02 * stream + 0.02 * retrieve + 0.02 * detail + 0.01 * specify
+LDA,4,8,2,0.10 * list + 0.04 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service + 0.02 * single
+LDA,4,8,3,0.09 * create + 0.06 * update + 0.05 * delete + 0.02 * payment + 0.02 * user + 0.02 * add + 0.02 * new + 0.01 * target
+LDA,4,9,0,0.04 * return + 0.03 * item + 0.02 * give + 0.02 * entry + 0.02 * would + 0.02 * tag + 0.02 * order + 0.02 * pay + 0.01 * team
+LDA,4,9,1,0.03 * get + 0.03 * search + 0.03 * user + 0.02 * list + 0.02 * stream + 0.02 * retrieve + 0.02 * detail + 0.01 * specify + 0.01 * transaction
+LDA,4,9,2,0.10 * list + 0.04 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service + 0.02 * single + 0.01 * get
+LDA,4,9,3,0.09 * create + 0.06 * update + 0.05 * delete + 0.02 * payment + 0.02 * user + 0.02 * add + 0.02 * new + 0.01 * target + 0.01 * group
+LDA,4,10,0,0.04 * return + 0.03 * item + 0.02 * give + 0.02 * entry + 0.02 * would + 0.02 * tag + 0.02 * order + 0.02 * pay + 0.01 * team + 0.01 * event
+LDA,4,10,1,0.03 * get + 0.03 * search + 0.03 * user + 0.02 * list + 0.02 * stream + 0.02 * retrieve + 0.02 * detail + 0.01 * specify + 0.01 * transaction + 0.01 * job
+LDA,4,10,2,0.10 * list + 0.04 * retrieve + 0.03 * type + 0.02 * project + 0.02 * information + 0.02 * specific + 0.02 * service + 0.02 * single + 0.01 * get + 0.01 * account
+LDA,4,10,3,0.09 * create + 0.06 * update + 0.05 * delete + 0.02 * payment + 0.02 * user + 0.02 * add + 0.02 * new + 0.01 * target + 0.01 * group + 0.01 * exist
+LSA,4,5,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create
+LSA,4,5,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update
+LSA,4,5,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list
+LSA,4,5,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file
+LSA,4,6,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource
+LSA,4,6,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify
+LSA,4,6,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new
+LSA,4,6,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify
+LSA,4,7,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user
+LSA,4,7,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric
+LSA,4,7,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify
+LSA,4,7,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment
+LSA,4,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,4,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,4,8,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric
+LSA,4,8,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot
+LSA,4,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,4,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,4,9,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric + -0.07 * group
+LSA,4,9,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would
+LSA,4,10,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group + 0.08 * subscription
+LSA,4,10,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new + -0.10 * delete
+LSA,4,10,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group + 0.07 * user
+LSA,4,10,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would + 0.09 * user
+NMF,4,5,0,0.12 * service + 0.03 * resource + 0.03 * type + 0.02 * app + 0.02 * facility
+NMF,4,5,1,0.20 * list + 0.03 * group + 0.02 * user + 0.02 * give + 0.02 * subscription
+NMF,4,5,2,0.11 * get + 0.08 * specify + 0.02 * key + 0.02 * subscription + 0.02 * service
+NMF,4,5,3,0.11 * create + 0.11 * update + 0.03 * delete + 0.03 * new + 0.03 * exist
+NMF,4,6,0,0.12 * service + 0.03 * resource + 0.03 * type + 0.02 * app + 0.02 * facility + 0.02 * name
+NMF,4,6,1,0.20 * list + 0.03 * group + 0.02 * user + 0.02 * give + 0.02 * subscription + 0.01 * fabric
+NMF,4,6,2,0.11 * get + 0.08 * specify + 0.02 * key + 0.02 * subscription + 0.02 * service + 0.02 * type
+NMF,4,6,3,0.11 * create + 0.11 * update + 0.03 * delete + 0.03 * new + 0.03 * exist + 0.02 * get
+NMF,4,7,0,0.12 * service + 0.03 * resource + 0.03 * type + 0.02 * app + 0.02 * facility + 0.02 * name + 0.02 * would
+NMF,4,7,1,0.20 * list + 0.03 * group + 0.02 * user + 0.02 * give + 0.02 * subscription + 0.01 * fabric + 0.01 * specific
+NMF,4,7,2,0.11 * get + 0.08 * specify + 0.02 * key + 0.02 * subscription + 0.02 * service + 0.02 * type + 0.02 * list
+NMF,4,7,3,0.11 * create + 0.11 * update + 0.03 * delete + 0.03 * new + 0.03 * exist + 0.02 * get + 0.02 * user
+NMF,4,8,0,0.12 * service + 0.03 * resource + 0.03 * type + 0.02 * app + 0.02 * facility + 0.02 * name + 0.02 * would + 0.02 * retrieve
+NMF,4,8,1,0.20 * list + 0.03 * group + 0.02 * user + 0.02 * give + 0.02 * subscription + 0.01 * fabric + 0.01 * specific + 0.01 * return
+NMF,4,8,2,0.11 * get + 0.08 * specify + 0.02 * key + 0.02 * subscription + 0.02 * service + 0.02 * type + 0.02 * list + 0.01 * delete
+NMF,4,8,3,0.11 * create + 0.11 * update + 0.03 * delete + 0.03 * new + 0.03 * exist + 0.02 * get + 0.02 * user + 0.01 * account
+NMF,4,9,0,0.12 * service + 0.03 * resource + 0.03 * type + 0.02 * app + 0.02 * facility + 0.02 * name + 0.02 * would + 0.02 * retrieve + 0.02 * detailed
+NMF,4,9,1,0.20 * list + 0.03 * group + 0.02 * user + 0.02 * give + 0.02 * subscription + 0.01 * fabric + 0.01 * specific + 0.01 * return + 0.01 * project
+NMF,4,9,2,0.11 * get + 0.08 * specify + 0.02 * key + 0.02 * subscription + 0.02 * service + 0.02 * type + 0.02 * list + 0.01 * delete + 0.01 * vault
+NMF,4,9,3,0.11 * create + 0.11 * update + 0.03 * delete + 0.03 * new + 0.03 * exist + 0.02 * get + 0.02 * user + 0.01 * account + 0.01 * order
+NMF,4,10,0,0.12 * service + 0.03 * resource + 0.03 * type + 0.02 * app + 0.02 * facility + 0.02 * name + 0.02 * would + 0.02 * retrieve + 0.02 * detailed + 0.02 * use
+NMF,4,10,1,0.20 * list + 0.03 * group + 0.02 * user + 0.02 * give + 0.02 * subscription + 0.01 * fabric + 0.01 * specific + 0.01 * return + 0.01 * project + 0.01 * available
+NMF,4,10,2,0.11 * get + 0.08 * specify + 0.02 * key + 0.02 * subscription + 0.02 * service + 0.02 * type + 0.02 * list + 0.01 * delete + 0.01 * vault + 0.01 * information
+NMF,4,10,3,0.11 * create + 0.11 * update + 0.03 * delete + 0.03 * new + 0.03 * exist + 0.02 * get + 0.02 * user + 0.01 * account + 0.01 * order + 0.01 * specific
+LDA,5,5,0,0.04 * item + 0.03 * entry + 0.03 * would + 0.03 * give + 0.02 * order
+LDA,5,5,1,0.03 * get + 0.03 * stream + 0.03 * list + 0.02 * search + 0.02 * time
+LDA,5,5,2,0.09 * list + 0.04 * type + 0.03 * information + 0.03 * service + 0.02 * return
+LDA,5,5,3,0.08 * create + 0.08 * update + 0.03 * add + 0.02 * new + 0.02 * user
+LDA,5,5,4,0.05 * retrieve + 0.05 * user + 0.04 * delete + 0.04 * create + 0.03 * list
+LDA,5,6,0,0.04 * item + 0.03 * entry + 0.03 * would + 0.03 * give + 0.02 * order + 0.02 * detail
+LDA,5,6,1,0.03 * get + 0.03 * stream + 0.03 * list + 0.02 * search + 0.02 * time + 0.02 * schedule
+LDA,5,6,2,0.09 * list + 0.04 * type + 0.03 * information + 0.03 * service + 0.02 * return + 0.02 * get
+LDA,5,6,3,0.08 * create + 0.08 * update + 0.03 * add + 0.02 * new + 0.02 * user + 0.02 * target
+LDA,5,6,4,0.05 * retrieve + 0.05 * user + 0.04 * delete + 0.04 * create + 0.03 * list + 0.03 * project
+LDA,5,7,0,0.04 * item + 0.03 * entry + 0.03 * would + 0.03 * give + 0.02 * order + 0.02 * detail + 0.02 * return
+LDA,5,7,1,0.03 * get + 0.03 * stream + 0.03 * list + 0.02 * search + 0.02 * time + 0.02 * schedule + 0.02 * transaction
+LDA,5,7,2,0.09 * list + 0.04 * type + 0.03 * information + 0.03 * service + 0.02 * return + 0.02 * get + 0.02 * retrieve
+LDA,5,7,3,0.08 * create + 0.08 * update + 0.03 * add + 0.02 * new + 0.02 * user + 0.02 * target + 0.02 * delete
+LDA,5,7,4,0.05 * retrieve + 0.05 * user + 0.04 * delete + 0.04 * create + 0.03 * list + 0.03 * project + 0.02 * payment
+LDA,5,8,0,0.04 * item + 0.03 * entry + 0.03 * would + 0.03 * give + 0.02 * order + 0.02 * detail + 0.02 * return + 0.02 * tag
+LDA,5,8,1,0.03 * get + 0.03 * stream + 0.03 * list + 0.02 * search + 0.02 * time + 0.02 * schedule + 0.02 * transaction + 0.02 * collection
+LDA,5,8,2,0.09 * list + 0.04 * type + 0.03 * information + 0.03 * service + 0.02 * return + 0.02 * get + 0.02 * retrieve + 0.02 * specific
+LDA,5,8,3,0.08 * create + 0.08 * update + 0.03 * add + 0.02 * new + 0.02 * user + 0.02 * target + 0.02 * delete + 0.02 * group
+LDA,5,8,4,0.05 * retrieve + 0.05 * user + 0.04 * delete + 0.04 * create + 0.03 * list + 0.03 * project + 0.02 * payment + 0.02 * report
+LDA,5,9,0,0.04 * item + 0.03 * entry + 0.03 * would + 0.03 * give + 0.02 * order + 0.02 * detail + 0.02 * return + 0.02 * tag + 0.02 * page
+LDA,5,9,1,0.03 * get + 0.03 * stream + 0.03 * list + 0.02 * search + 0.02 * time + 0.02 * schedule + 0.02 * transaction + 0.02 * collection + 0.02 * job
+LDA,5,9,2,0.09 * list + 0.04 * type + 0.03 * information + 0.03 * service + 0.02 * return + 0.02 * get + 0.02 * retrieve + 0.02 * specific + 0.01 * plan
+LDA,5,9,3,0.08 * create + 0.08 * update + 0.03 * add + 0.02 * new + 0.02 * user + 0.02 * target + 0.02 * delete + 0.02 * group + 0.01 * template
+LDA,5,9,4,0.05 * retrieve + 0.05 * user + 0.04 * delete + 0.04 * create + 0.03 * list + 0.03 * project + 0.02 * payment + 0.02 * report + 0.02 * file
+LDA,5,10,0,0.04 * item + 0.03 * entry + 0.03 * would + 0.03 * give + 0.02 * order + 0.02 * detail + 0.02 * return + 0.02 * tag + 0.02 * page + 0.02 * find
+LDA,5,10,1,0.03 * get + 0.03 * stream + 0.03 * list + 0.02 * search + 0.02 * time + 0.02 * schedule + 0.02 * transaction + 0.02 * collection + 0.02 * job + 0.01 * specify
+LDA,5,10,2,0.09 * list + 0.04 * type + 0.03 * information + 0.03 * service + 0.02 * return + 0.02 * get + 0.02 * retrieve + 0.02 * specific + 0.01 * plan + 0.01 * address
+LDA,5,10,3,0.08 * create + 0.08 * update + 0.03 * add + 0.02 * new + 0.02 * user + 0.02 * target + 0.02 * delete + 0.02 * group + 0.01 * template + 0.01 * method
+LDA,5,10,4,0.05 * retrieve + 0.05 * user + 0.04 * delete + 0.04 * create + 0.03 * list + 0.03 * project + 0.02 * payment + 0.02 * report + 0.02 * file + 0.02 * return
+LSA,5,5,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create
+LSA,5,5,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update
+LSA,5,5,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list
+LSA,5,5,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file
+LSA,5,5,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify
+LSA,5,6,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource
+LSA,5,6,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify
+LSA,5,6,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new
+LSA,5,6,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify
+LSA,5,6,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry
+LSA,5,7,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user
+LSA,5,7,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric
+LSA,5,7,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify
+LSA,5,7,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment
+LSA,5,7,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create
+LSA,5,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,5,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,5,8,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric
+LSA,5,8,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot
+LSA,5,8,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would
+LSA,5,9,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric + -0.09 * group
+LSA,5,9,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new
+LSA,5,9,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group
+LSA,5,9,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would
+LSA,5,9,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list
+LSA,5,10,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric + -0.09 * group + -0.08 * subscription
+LSA,5,10,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new + -0.10 * delete
+LSA,5,10,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group + 0.07 * user
+LSA,5,10,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot + -0.09 * would + -0.09 * user
+LSA,5,10,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list + -0.10 * fabric
+NMF,5,5,0,0.11 * create + 0.10 * service + 0.09 * list + 0.04 * specify + 0.03 * fabric
+NMF,5,5,1,0.10 * update + 0.04 * would + 0.04 * specific + 0.02 * information + 0.02 * web
+NMF,5,5,2,0.10 * specify + 0.03 * file + 0.03 * get + 0.03 * retrieve + 0.02 * slot
+NMF,5,5,3,0.16 * delete + 0.05 * resource + 0.03 * user + 0.03 * group + 0.02 * type
+NMF,5,5,4,0.12 * get + 0.11 * list + 0.03 * give + 0.02 * image + 0.02 * available
+NMF,5,6,0,0.11 * create + 0.10 * service + 0.09 * list + 0.04 * specify + 0.03 * fabric + 0.02 * cluster
+NMF,5,6,1,0.10 * update + 0.04 * would + 0.04 * specific + 0.02 * information + 0.02 * web + 0.02 * site
+NMF,5,6,2,0.10 * specify + 0.03 * file + 0.03 * get + 0.03 * retrieve + 0.02 * slot + 0.02 * deployment
+NMF,5,6,3,0.16 * delete + 0.05 * resource + 0.03 * user + 0.03 * group + 0.02 * type + 0.02 * service
+NMF,5,6,4,0.12 * get + 0.11 * list + 0.03 * give + 0.02 * image + 0.02 * available + 0.01 * return
+NMF,5,7,0,0.11 * create + 0.10 * service + 0.09 * list + 0.04 * specify + 0.03 * fabric + 0.02 * cluster + 0.02 * new
+NMF,5,7,1,0.10 * update + 0.04 * would + 0.04 * specific + 0.02 * information + 0.02 * web + 0.02 * site + 0.02 * exist
+NMF,5,7,2,0.10 * specify + 0.03 * file + 0.03 * get + 0.03 * retrieve + 0.02 * slot + 0.02 * deployment + 0.02 * return
+NMF,5,7,3,0.16 * delete + 0.05 * resource + 0.03 * user + 0.03 * group + 0.02 * type + 0.02 * service + 0.02 * give
+NMF,5,7,4,0.12 * get + 0.11 * list + 0.03 * give + 0.02 * image + 0.02 * available + 0.01 * return + 0.01 * user
+NMF,5,8,0,0.11 * create + 0.10 * service + 0.09 * list + 0.04 * specify + 0.03 * fabric + 0.02 * cluster + 0.02 * new + 0.02 * group
+NMF,5,8,1,0.10 * update + 0.04 * would + 0.04 * specific + 0.02 * information + 0.02 * web + 0.02 * site + 0.02 * exist + 0.02 * add
+NMF,5,8,2,0.10 * specify + 0.03 * file + 0.03 * get + 0.03 * retrieve + 0.02 * slot + 0.02 * deployment + 0.02 * return + 0.02 * time
+NMF,5,8,3,0.16 * delete + 0.05 * resource + 0.03 * user + 0.03 * group + 0.02 * type + 0.02 * service + 0.02 * give + 0.02 * account
+NMF,5,8,4,0.12 * get + 0.11 * list + 0.03 * give + 0.02 * image + 0.02 * available + 0.01 * return + 0.01 * user + 0.01 * key
+NMF,5,9,0,0.11 * create + 0.10 * service + 0.09 * list + 0.04 * specify + 0.03 * fabric + 0.02 * cluster + 0.02 * new + 0.02 * group + 0.01 * subscription
+NMF,5,9,1,0.10 * update + 0.04 * would + 0.04 * specific + 0.02 * information + 0.02 * web + 0.02 * site + 0.02 * exist + 0.02 * add + 0.02 * type
+NMF,5,9,2,0.10 * specify + 0.03 * file + 0.03 * get + 0.03 * retrieve + 0.02 * slot + 0.02 * deployment + 0.02 * return + 0.02 * time + 0.02 * value
+NMF,5,9,3,0.16 * delete + 0.05 * resource + 0.03 * user + 0.03 * group + 0.02 * type + 0.02 * service + 0.02 * give + 0.02 * account + 0.02 * exist
+NMF,5,9,4,0.12 * get + 0.11 * list + 0.03 * give + 0.02 * image + 0.02 * available + 0.01 * return + 0.01 * user + 0.01 * key + 0.01 * would
+NMF,5,10,0,0.11 * create + 0.10 * service + 0.09 * list + 0.04 * specify + 0.03 * fabric + 0.02 * cluster + 0.02 * new + 0.02 * group + 0.01 * subscription + 0.01 * use
+NMF,5,10,1,0.10 * update + 0.04 * would + 0.04 * specific + 0.02 * information + 0.02 * web + 0.02 * site + 0.02 * exist + 0.02 * add + 0.02 * type + 0.01 * event
+NMF,5,10,2,0.10 * specify + 0.03 * file + 0.03 * get + 0.03 * retrieve + 0.02 * slot + 0.02 * deployment + 0.02 * return + 0.02 * time + 0.02 * value + 0.01 * use
+NMF,5,10,3,0.16 * delete + 0.05 * resource + 0.03 * user + 0.03 * group + 0.02 * type + 0.02 * service + 0.02 * give + 0.02 * account + 0.02 * exist + 0.02 * application
+NMF,5,10,4,0.12 * get + 0.11 * list + 0.03 * give + 0.02 * image + 0.02 * available + 0.01 * return + 0.01 * user + 0.01 * key + 0.01 * would + 0.01 * name
+LDA,6,5,0,0.05 * item + 0.04 * give + 0.03 * detail + 0.03 * tag + 0.03 * order
+LDA,6,5,1,0.04 * get + 0.04 * would + 0.03 * stream + 0.03 * list + 0.02 * specific
+LDA,6,5,2,0.07 * list + 0.05 * type + 0.04 * service + 0.03 * information + 0.03 * search
+LDA,6,5,3,0.10 * create + 0.07 * update + 0.06 * delete + 0.03 * add + 0.03 * new
+LDA,6,5,4,0.08 * retrieve + 0.05 * list + 0.03 * payment + 0.03 * create + 0.02 * delete
+LDA,6,5,5,0.07 * user + 0.03 * entry + 0.03 * list + 0.03 * return + 0.03 * group
+LDA,6,6,0,0.05 * item + 0.04 * give + 0.03 * detail + 0.03 * tag + 0.03 * order + 0.02 * list
+LDA,6,6,1,0.04 * get + 0.04 * would + 0.03 * stream + 0.03 * list + 0.02 * specific + 0.02 * time
+LDA,6,6,2,0.07 * list + 0.05 * type + 0.04 * service + 0.03 * information + 0.03 * search + 0.02 * project
+LDA,6,6,3,0.10 * create + 0.07 * update + 0.06 * delete + 0.03 * add + 0.03 * new + 0.02 * page
+LDA,6,6,4,0.08 * retrieve + 0.05 * list + 0.03 * payment + 0.03 * create + 0.02 * delete + 0.02 * project
+LDA,6,6,5,0.07 * user + 0.03 * entry + 0.03 * list + 0.03 * return + 0.03 * group + 0.02 * report
+LDA,6,7,0,0.05 * item + 0.04 * give + 0.03 * detail + 0.03 * tag + 0.03 * order + 0.02 * list + 0.02 * find
+LDA,6,7,1,0.04 * get + 0.04 * would + 0.03 * stream + 0.03 * list + 0.02 * specific + 0.02 * time + 0.02 * transaction
+LDA,6,7,2,0.07 * list + 0.05 * type + 0.04 * service + 0.03 * information + 0.03 * search + 0.02 * project + 0.02 * get
+LDA,6,7,3,0.10 * create + 0.07 * update + 0.06 * delete + 0.03 * add + 0.03 * new + 0.02 * page + 0.02 * target
+LDA,6,7,4,0.08 * retrieve + 0.05 * list + 0.03 * payment + 0.03 * create + 0.02 * delete + 0.02 * project + 0.02 * category
+LDA,6,7,5,0.07 * user + 0.03 * entry + 0.03 * list + 0.03 * return + 0.03 * group + 0.02 * report + 0.02 * schedule
+LDA,6,8,0,0.05 * item + 0.04 * give + 0.03 * detail + 0.03 * tag + 0.03 * order + 0.02 * list + 0.02 * find + 0.02 * event
+LDA,6,8,1,0.04 * get + 0.04 * would + 0.03 * stream + 0.03 * list + 0.02 * specific + 0.02 * time + 0.02 * transaction + 0.02 * job
+LDA,6,8,2,0.07 * list + 0.05 * type + 0.04 * service + 0.03 * information + 0.03 * search + 0.02 * project + 0.02 * get + 0.02 * address
+LDA,6,8,3,0.10 * create + 0.07 * update + 0.06 * delete + 0.03 * add + 0.03 * new + 0.02 * page + 0.02 * target + 0.02 * run
+LDA,6,8,4,0.08 * retrieve + 0.05 * list + 0.03 * payment + 0.03 * create + 0.02 * delete + 0.02 * project + 0.02 * category + 0.02 * remove
+LDA,6,8,5,0.07 * user + 0.03 * entry + 0.03 * list + 0.03 * return + 0.03 * group + 0.02 * report + 0.02 * schedule + 0.02 * pay
+LDA,6,9,0,0.05 * item + 0.04 * give + 0.03 * detail + 0.03 * tag + 0.03 * order + 0.02 * list + 0.02 * find + 0.02 * event + 0.02 * template
+LDA,6,9,1,0.04 * get + 0.04 * would + 0.03 * stream + 0.03 * list + 0.02 * specific + 0.02 * time + 0.02 * transaction + 0.02 * job + 0.02 * specify
+LDA,6,9,2,0.07 * list + 0.05 * type + 0.04 * service + 0.03 * information + 0.03 * search + 0.02 * project + 0.02 * get + 0.02 * address + 0.02 * account
+LDA,6,9,3,0.10 * create + 0.07 * update + 0.06 * delete + 0.03 * add + 0.03 * new + 0.02 * page + 0.02 * target + 0.02 * run + 0.01 * contact
+LDA,6,9,4,0.08 * retrieve + 0.05 * list + 0.03 * payment + 0.03 * create + 0.02 * delete + 0.02 * project + 0.02 * category + 0.02 * remove + 0.02 * give
+LDA,6,9,5,0.07 * user + 0.03 * entry + 0.03 * list + 0.03 * return + 0.03 * group + 0.02 * report + 0.02 * schedule + 0.02 * pay + 0.02 * single
+LDA,6,10,0,0.05 * item + 0.04 * give + 0.03 * detail + 0.03 * tag + 0.03 * order + 0.02 * list + 0.02 * find + 0.02 * event + 0.02 * template + 0.02 * return
+LDA,6,10,1,0.04 * get + 0.04 * would + 0.03 * stream + 0.03 * list + 0.02 * specific + 0.02 * time + 0.02 * transaction + 0.02 * job + 0.02 * specify + 0.02 * city
+LDA,6,10,2,0.07 * list + 0.05 * type + 0.04 * service + 0.03 * information + 0.03 * search + 0.02 * project + 0.02 * get + 0.02 * address + 0.02 * account + 0.01 * revision
+LDA,6,10,3,0.10 * create + 0.07 * update + 0.06 * delete + 0.03 * add + 0.03 * new + 0.02 * page + 0.02 * target + 0.02 * run + 0.01 * contact + 0.01 * order
+LDA,6,10,4,0.08 * retrieve + 0.05 * list + 0.03 * payment + 0.03 * create + 0.02 * delete + 0.02 * project + 0.02 * category + 0.02 * remove + 0.02 * give + 0.02 * image
+LDA,6,10,5,0.07 * user + 0.03 * entry + 0.03 * list + 0.03 * return + 0.03 * group + 0.02 * report + 0.02 * schedule + 0.02 * pay + 0.02 * single + 0.02 * historical
+LSA,6,5,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create
+LSA,6,5,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update
+LSA,6,5,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list
+LSA,6,5,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file
+LSA,6,5,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify
+LSA,6,5,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry
+LSA,6,6,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource
+LSA,6,6,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify
+LSA,6,6,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new
+LSA,6,6,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify
+LSA,6,6,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry
+LSA,6,6,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would
+LSA,6,7,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user
+LSA,6,7,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric
+LSA,6,7,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify
+LSA,6,7,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment
+LSA,6,7,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create
+LSA,6,7,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric
+LSA,6,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,6,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,6,8,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric
+LSA,6,8,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot
+LSA,6,8,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would
+LSA,6,8,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would + -0.11 * fabric + 0.10 * give
+LSA,6,9,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric + -0.09 * group
+LSA,6,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,6,9,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group
+LSA,6,9,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * slot + -0.09 * deployment + -0.09 * would
+LSA,6,9,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would + 0.11 * list
+LSA,6,9,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site
+LSA,6,10,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric + -0.09 * group + -0.08 * subscription
+LSA,6,10,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new + -0.10 * delete
+LSA,6,10,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group + 0.07 * user
+LSA,6,10,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot + -0.09 * would + -0.09 * user
+LSA,6,10,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list + -0.10 * fabric
+LSA,6,10,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would + -0.11 * fabric + 0.10 * give + 0.09 * site + 0.09 * slot
+NMF,6,5,0,0.13 * service + 0.06 * get + 0.05 * fabric + 0.04 * specify + 0.04 * resource
+NMF,6,5,1,0.14 * update + 0.07 * user + 0.04 * exist + 0.04 * group + 0.03 * account
+NMF,6,5,2,0.18 * delete + 0.02 * would + 0.02 * specific + 0.02 * retrieve + 0.02 * service
+NMF,6,5,3,0.22 * create + 0.04 * new + 0.03 * service + 0.03 * update + 0.02 * specify
+NMF,6,5,4,0.26 * list + 0.02 * user + 0.02 * give + 0.01 * return + 0.01 * group
+NMF,6,5,5,0.09 * get + 0.04 * would + 0.03 * information + 0.03 * specify + 0.02 * job
+NMF,6,6,0,0.13 * service + 0.06 * get + 0.05 * fabric + 0.04 * specify + 0.04 * resource + 0.03 * application
+NMF,6,6,1,0.14 * update + 0.07 * user + 0.04 * exist + 0.04 * group + 0.03 * account + 0.02 * resource
+NMF,6,6,2,0.18 * delete + 0.02 * would + 0.02 * specific + 0.02 * retrieve + 0.02 * service + 0.02 * app
+NMF,6,6,3,0.22 * create + 0.04 * new + 0.03 * service + 0.03 * update + 0.02 * specify + 0.02 * cluster
+NMF,6,6,4,0.26 * list + 0.02 * user + 0.02 * give + 0.01 * return + 0.01 * group + 0.01 * site
+NMF,6,6,5,0.09 * get + 0.04 * would + 0.03 * information + 0.03 * specify + 0.02 * job + 0.02 * deployment
+NMF,6,7,0,0.13 * service + 0.06 * get + 0.05 * fabric + 0.04 * specify + 0.04 * resource + 0.03 * application + 0.02 * type
+NMF,6,7,1,0.14 * update + 0.07 * user + 0.04 * exist + 0.04 * group + 0.03 * account + 0.02 * resource + 0.02 * add
+NMF,6,7,2,0.18 * delete + 0.02 * would + 0.02 * specific + 0.02 * retrieve + 0.02 * service + 0.02 * app + 0.02 * return
+NMF,6,7,3,0.22 * create + 0.04 * new + 0.03 * service + 0.03 * update + 0.02 * specify + 0.02 * cluster + 0.02 * fabric
+NMF,6,7,4,0.26 * list + 0.02 * user + 0.02 * give + 0.01 * return + 0.01 * group + 0.01 * site + 0.01 * category
+NMF,6,7,5,0.09 * get + 0.04 * would + 0.03 * information + 0.03 * specify + 0.02 * job + 0.02 * deployment + 0.02 * slot
+NMF,6,8,0,0.13 * service + 0.06 * get + 0.05 * fabric + 0.04 * specify + 0.04 * resource + 0.03 * application + 0.02 * type + 0.02 * use
+NMF,6,8,1,0.14 * update + 0.07 * user + 0.04 * exist + 0.04 * group + 0.03 * account + 0.02 * resource + 0.02 * add + 0.02 * specific
+NMF,6,8,2,0.18 * delete + 0.02 * would + 0.02 * specific + 0.02 * retrieve + 0.02 * service + 0.02 * app + 0.02 * return + 0.02 * cluster
+NMF,6,8,3,0.22 * create + 0.04 * new + 0.03 * service + 0.03 * update + 0.02 * specify + 0.02 * cluster + 0.02 * fabric + 0.02 * network
+NMF,6,8,4,0.26 * list + 0.02 * user + 0.02 * give + 0.01 * return + 0.01 * group + 0.01 * site + 0.01 * category + 0.01 * available
+NMF,6,8,5,0.09 * get + 0.04 * would + 0.03 * information + 0.03 * specify + 0.02 * job + 0.02 * deployment + 0.02 * slot + 0.02 * event
+NMF,6,9,0,0.13 * service + 0.06 * get + 0.05 * fabric + 0.04 * specify + 0.04 * resource + 0.03 * application + 0.02 * type + 0.02 * use + 0.02 * partition
+NMF,6,9,1,0.14 * update + 0.07 * user + 0.04 * exist + 0.04 * group + 0.03 * account + 0.02 * resource + 0.02 * add + 0.02 * specific + 0.01 * new
+NMF,6,9,2,0.18 * delete + 0.02 * would + 0.02 * specific + 0.02 * retrieve + 0.02 * service + 0.02 * app + 0.02 * return + 0.02 * cluster + 0.02 * web
+NMF,6,9,3,0.22 * create + 0.04 * new + 0.03 * service + 0.03 * update + 0.02 * specify + 0.02 * cluster + 0.02 * fabric + 0.02 * network + 0.02 * name
+NMF,6,9,4,0.26 * list + 0.02 * user + 0.02 * give + 0.01 * return + 0.01 * group + 0.01 * site + 0.01 * category + 0.01 * available + 0.01 * specify
+NMF,6,9,5,0.09 * get + 0.04 * would + 0.03 * information + 0.03 * specify + 0.02 * job + 0.02 * deployment + 0.02 * slot + 0.02 * event + 0.01 * detail
+NMF,6,10,0,0.13 * service + 0.06 * get + 0.05 * fabric + 0.04 * specify + 0.04 * resource + 0.03 * application + 0.02 * type + 0.02 * use + 0.02 * partition + 0.02 * facility
+NMF,6,10,1,0.14 * update + 0.07 * user + 0.04 * exist + 0.04 * group + 0.03 * account + 0.02 * resource + 0.02 * add + 0.02 * specific + 0.01 * new + 0.01 * key
+NMF,6,10,2,0.18 * delete + 0.02 * would + 0.02 * specific + 0.02 * retrieve + 0.02 * service + 0.02 * app + 0.02 * return + 0.02 * cluster + 0.02 * web + 0.01 * user
+NMF,6,10,3,0.22 * create + 0.04 * new + 0.03 * service + 0.03 * update + 0.02 * specify + 0.02 * cluster + 0.02 * fabric + 0.02 * network + 0.02 * name + 0.01 * type
+NMF,6,10,4,0.26 * list + 0.02 * user + 0.02 * give + 0.01 * return + 0.01 * group + 0.01 * site + 0.01 * category + 0.01 * available + 0.01 * specify + 0.01 * project
+NMF,6,10,5,0.09 * get + 0.04 * would + 0.03 * information + 0.03 * specify + 0.02 * job + 0.02 * deployment + 0.02 * slot + 0.02 * event + 0.01 * detail + 0.01 * image
+LDA,7,5,0,0.06 * return + 0.05 * entry + 0.05 * order + 0.05 * item + 0.03 * would
+LDA,7,5,1,0.04 * schedule + 0.04 * list + 0.04 * detail + 0.03 * get + 0.03 * would
+LDA,7,5,2,0.10 * list + 0.05 * type + 0.04 * information + 0.03 * service + 0.02 * get
+LDA,7,5,3,0.09 * update + 0.05 * add + 0.03 * target + 0.03 * create + 0.03 * delete
+LDA,7,5,4,0.10 * retrieve + 0.07 * delete + 0.07 * user + 0.04 * list + 0.02 * category
+LDA,7,5,5,0.04 * user + 0.04 * search + 0.04 * list + 0.04 * group + 0.03 * single
+LDA,7,5,6,0.11 * create + 0.03 * payment + 0.03 * stream + 0.03 * report + 0.02 * update
+LDA,7,6,0,0.06 * return + 0.05 * entry + 0.05 * order + 0.05 * item + 0.03 * would + 0.03 * file
+LDA,7,6,1,0.04 * schedule + 0.04 * list + 0.04 * detail + 0.03 * get + 0.03 * would + 0.02 * job
+LDA,7,6,2,0.10 * list + 0.05 * type + 0.04 * information + 0.03 * service + 0.02 * get + 0.02 * transaction
+LDA,7,6,3,0.09 * update + 0.05 * add + 0.03 * target + 0.03 * create + 0.03 * delete + 0.02 * run
+LDA,7,6,4,0.10 * retrieve + 0.07 * delete + 0.07 * user + 0.04 * list + 0.02 * category + 0.02 * give
+LDA,7,6,5,0.04 * user + 0.04 * search + 0.04 * list + 0.04 * group + 0.03 * single + 0.03 * pay
+LDA,7,6,6,0.11 * create + 0.03 * payment + 0.03 * stream + 0.03 * report + 0.02 * update + 0.02 * new
+LDA,7,7,0,0.06 * return + 0.05 * entry + 0.05 * order + 0.05 * item + 0.03 * would + 0.03 * file + 0.02 * event
+LDA,7,7,1,0.04 * schedule + 0.04 * list + 0.04 * detail + 0.03 * get + 0.03 * would + 0.02 * job + 0.02 * specify
+LDA,7,7,2,0.10 * list + 0.05 * type + 0.04 * information + 0.03 * service + 0.02 * get + 0.02 * transaction + 0.02 * return
+LDA,7,7,3,0.09 * update + 0.05 * add + 0.03 * target + 0.03 * create + 0.03 * delete + 0.02 * run + 0.02 * contact
+LDA,7,7,4,0.10 * retrieve + 0.07 * delete + 0.07 * user + 0.04 * list + 0.02 * category + 0.02 * give + 0.02 * image
+LDA,7,7,5,0.04 * user + 0.04 * search + 0.04 * list + 0.04 * group + 0.03 * single + 0.03 * pay + 0.02 * project
+LDA,7,7,6,0.11 * create + 0.03 * payment + 0.03 * stream + 0.03 * report + 0.02 * update + 0.02 * new + 0.02 * time
+LDA,7,8,0,0.06 * return + 0.05 * entry + 0.05 * order + 0.05 * item + 0.03 * would + 0.03 * file + 0.02 * event + 0.02 * tag
+LDA,7,8,1,0.04 * schedule + 0.04 * list + 0.04 * detail + 0.03 * get + 0.03 * would + 0.02 * job + 0.02 * specify + 0.02 * specific
+LDA,7,8,2,0.10 * list + 0.05 * type + 0.04 * information + 0.03 * service + 0.02 * get + 0.02 * transaction + 0.02 * return + 0.02 * address
+LDA,7,8,3,0.09 * update + 0.05 * add + 0.03 * target + 0.03 * create + 0.03 * delete + 0.02 * run + 0.02 * contact + 0.02 * member
+LDA,7,8,4,0.10 * retrieve + 0.07 * delete + 0.07 * user + 0.04 * list + 0.02 * category + 0.02 * give + 0.02 * image + 0.02 * record
+LDA,7,8,5,0.04 * user + 0.04 * search + 0.04 * list + 0.04 * group + 0.03 * single + 0.03 * pay + 0.02 * project + 0.02 * historical
+LDA,7,8,6,0.11 * create + 0.03 * payment + 0.03 * stream + 0.03 * report + 0.02 * update + 0.02 * new + 0.02 * time + 0.02 * collection
+LDA,7,9,0,0.06 * return + 0.05 * entry + 0.05 * order + 0.05 * item + 0.03 * would + 0.03 * file + 0.02 * event + 0.02 * tag + 0.02 * template
+LDA,7,9,1,0.04 * schedule + 0.04 * list + 0.04 * detail + 0.03 * get + 0.03 * would + 0.02 * job + 0.02 * specify + 0.02 * specific + 0.02 * account
+LDA,7,9,2,0.10 * list + 0.05 * type + 0.04 * information + 0.03 * service + 0.02 * get + 0.02 * transaction + 0.02 * return + 0.02 * address + 0.02 * revision
+LDA,7,9,3,0.09 * update + 0.05 * add + 0.03 * target + 0.03 * create + 0.03 * delete + 0.02 * run + 0.02 * contact + 0.02 * member + 0.02 * new
+LDA,7,9,4,0.10 * retrieve + 0.07 * delete + 0.07 * user + 0.04 * list + 0.02 * category + 0.02 * give + 0.02 * image + 0.02 * record + 0.02 * definition
+LDA,7,9,5,0.04 * user + 0.04 * search + 0.04 * list + 0.04 * group + 0.03 * single + 0.03 * pay + 0.02 * project + 0.02 * historical + 0.02 * provide
+LDA,7,9,6,0.11 * create + 0.03 * payment + 0.03 * stream + 0.03 * report + 0.02 * update + 0.02 * new + 0.02 * time + 0.02 * collection + 0.02 * give
+LDA,7,10,0,0.06 * return + 0.05 * entry + 0.05 * order + 0.05 * item + 0.03 * would + 0.03 * file + 0.02 * event + 0.02 * tag + 0.02 * template + 0.02 * document
+LDA,7,10,1,0.04 * schedule + 0.04 * list + 0.04 * detail + 0.03 * get + 0.03 * would + 0.02 * job + 0.02 * specify + 0.02 * specific + 0.02 * account + 0.02 * call
+LDA,7,10,2,0.10 * list + 0.05 * type + 0.04 * information + 0.03 * service + 0.02 * get + 0.02 * transaction + 0.02 * return + 0.02 * address + 0.02 * revision + 0.02 * project
+LDA,7,10,3,0.09 * update + 0.05 * add + 0.03 * target + 0.03 * create + 0.03 * delete + 0.02 * run + 0.02 * contact + 0.02 * member + 0.02 * new + 0.02 * remove
+LDA,7,10,4,0.10 * retrieve + 0.07 * delete + 0.07 * user + 0.04 * list + 0.02 * category + 0.02 * give + 0.02 * image + 0.02 * record + 0.02 * definition + 0.01 * entity
+LDA,7,10,5,0.04 * user + 0.04 * search + 0.04 * list + 0.04 * group + 0.03 * single + 0.03 * pay + 0.02 * project + 0.02 * historical + 0.02 * provide + 0.02 * video
+LDA,7,10,6,0.11 * create + 0.03 * payment + 0.03 * stream + 0.03 * report + 0.02 * update + 0.02 * new + 0.02 * time + 0.02 * collection + 0.02 * give + 0.02 * custom
+LSA,7,5,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create
+LSA,7,5,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update
+LSA,7,5,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list
+LSA,7,5,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file
+LSA,7,5,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify
+LSA,7,5,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry
+LSA,7,5,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific
+LSA,7,6,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource
+LSA,7,6,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify
+LSA,7,6,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new
+LSA,7,6,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify
+LSA,7,6,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry
+LSA,7,6,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would
+LSA,7,6,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment
+LSA,7,7,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user
+LSA,7,7,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric
+LSA,7,7,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify
+LSA,7,7,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment
+LSA,7,7,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create
+LSA,7,7,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric
+LSA,7,7,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get
+LSA,7,8,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric
+LSA,7,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,7,8,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric
+LSA,7,8,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot
+LSA,7,8,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would
+LSA,7,8,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would + -0.11 * fabric + 0.10 * give
+LSA,7,8,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot
+LSA,7,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,7,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,7,9,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric + -0.07 * group
+LSA,7,9,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would
+LSA,7,9,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would + 0.11 * list
+LSA,7,9,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site
+LSA,7,9,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get + -0.23 * slot + -0.16 * instance
+LSA,7,10,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group + 0.08 * subscription
+LSA,7,10,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new + 0.10 * delete
+LSA,7,10,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric + -0.07 * group + -0.07 * user
+LSA,7,10,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would + 0.09 * user
+LSA,7,10,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list + -0.10 * fabric
+LSA,7,10,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site + -0.09 * slot
+LSA,7,10,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get + -0.23 * slot + -0.16 * instance + -0.15 * process
+NMF,7,5,0,0.09 * create + 0.07 * type + 0.04 * entry + 0.04 * deployment + 0.04 * update
+NMF,7,5,1,0.16 * get + 0.13 * create + 0.02 * new + 0.02 * update + 0.02 * partition
+NMF,7,5,2,0.17 * delete + 0.06 * exist + 0.03 * order + 0.03 * key + 0.03 * certificate
+NMF,7,5,3,0.27 * list + 0.02 * specify + 0.02 * get + 0.01 * group + 0.01 * cluster
+NMF,7,5,4,0.11 * user + 0.09 * specify + 0.05 * retrieve + 0.02 * return + 0.02 * add
+NMF,7,5,5,0.07 * update + 0.07 * specific + 0.05 * delete + 0.05 * would + 0.05 * event
+NMF,7,5,6,0.12 * service + 0.08 * get + 0.05 * give + 0.03 * fabric + 0.02 * resource
+NMF,7,6,0,0.09 * create + 0.07 * type + 0.04 * entry + 0.04 * deployment + 0.04 * update + 0.02 * image
+NMF,7,6,1,0.16 * get + 0.13 * create + 0.02 * new + 0.02 * update + 0.02 * partition + 0.01 * network
+NMF,7,6,2,0.17 * delete + 0.06 * exist + 0.03 * order + 0.03 * key + 0.03 * certificate + 0.02 * share
+NMF,7,6,3,0.27 * list + 0.02 * specify + 0.02 * get + 0.01 * group + 0.01 * cluster + 0.01 * subscription
+NMF,7,6,4,0.11 * user + 0.09 * specify + 0.05 * retrieve + 0.02 * return + 0.02 * add + 0.02 * account
+NMF,7,6,5,0.07 * update + 0.07 * specific + 0.05 * delete + 0.05 * would + 0.05 * event + 0.04 * resource
+NMF,7,6,6,0.12 * service + 0.08 * get + 0.05 * give + 0.03 * fabric + 0.02 * resource + 0.02 * cluster
+NMF,7,7,0,0.09 * create + 0.07 * type + 0.04 * entry + 0.04 * deployment + 0.04 * update + 0.02 * image + 0.02 * new
+NMF,7,7,1,0.16 * get + 0.13 * create + 0.02 * new + 0.02 * update + 0.02 * partition + 0.01 * network + 0.01 * configuration
+NMF,7,7,2,0.17 * delete + 0.06 * exist + 0.03 * order + 0.03 * key + 0.03 * certificate + 0.02 * share + 0.02 * specify
+NMF,7,7,3,0.27 * list + 0.02 * specify + 0.02 * get + 0.01 * group + 0.01 * cluster + 0.01 * subscription + 0.01 * service
+NMF,7,7,4,0.11 * user + 0.09 * specify + 0.05 * retrieve + 0.02 * return + 0.02 * add + 0.02 * account + 0.02 * set
+NMF,7,7,5,0.07 * update + 0.07 * specific + 0.05 * delete + 0.05 * would + 0.05 * event + 0.04 * resource + 0.04 * group
+NMF,7,7,6,0.12 * service + 0.08 * get + 0.05 * give + 0.03 * fabric + 0.02 * resource + 0.02 * cluster + 0.02 * list
+NMF,7,8,0,0.09 * create + 0.07 * type + 0.04 * entry + 0.04 * deployment + 0.04 * update + 0.02 * image + 0.02 * new + 0.02 * information
+NMF,7,8,1,0.16 * get + 0.13 * create + 0.02 * new + 0.02 * update + 0.02 * partition + 0.01 * network + 0.01 * configuration + 0.01 * crud
+NMF,7,8,2,0.17 * delete + 0.06 * exist + 0.03 * order + 0.03 * key + 0.03 * certificate + 0.02 * share + 0.02 * specify + 0.02 * file
+NMF,7,8,3,0.27 * list + 0.02 * specify + 0.02 * get + 0.01 * group + 0.01 * cluster + 0.01 * subscription + 0.01 * service + 0.01 * container
+NMF,7,8,4,0.11 * user + 0.09 * specify + 0.05 * retrieve + 0.02 * return + 0.02 * add + 0.02 * account + 0.02 * set + 0.01 * key
+NMF,7,8,5,0.07 * update + 0.07 * specific + 0.05 * delete + 0.05 * would + 0.05 * event + 0.04 * resource + 0.04 * group + 0.02 * site
+NMF,7,8,6,0.12 * service + 0.08 * get + 0.05 * give + 0.03 * fabric + 0.02 * resource + 0.02 * cluster + 0.02 * list + 0.02 * application
+NMF,7,9,0,0.09 * create + 0.07 * type + 0.04 * entry + 0.04 * deployment + 0.04 * update + 0.02 * image + 0.02 * new + 0.02 * information + 0.02 * slot
+NMF,7,9,1,0.16 * get + 0.13 * create + 0.02 * new + 0.02 * update + 0.02 * partition + 0.01 * network + 0.01 * configuration + 0.01 * crud + 0.01 * pay
+NMF,7,9,2,0.17 * delete + 0.06 * exist + 0.03 * order + 0.03 * key + 0.03 * certificate + 0.02 * share + 0.02 * specify + 0.02 * file + 0.01 * revision
+NMF,7,9,3,0.27 * list + 0.02 * specify + 0.02 * get + 0.01 * group + 0.01 * cluster + 0.01 * subscription + 0.01 * service + 0.01 * container + 0.01 * project
+NMF,7,9,4,0.11 * user + 0.09 * specify + 0.05 * retrieve + 0.02 * return + 0.02 * add + 0.02 * account + 0.02 * set + 0.01 * key + 0.01 * current
+NMF,7,9,5,0.07 * update + 0.07 * specific + 0.05 * delete + 0.05 * would + 0.05 * event + 0.04 * resource + 0.04 * group + 0.02 * site + 0.02 * web
+NMF,7,9,6,0.12 * service + 0.08 * get + 0.05 * give + 0.03 * fabric + 0.02 * resource + 0.02 * cluster + 0.02 * list + 0.02 * application + 0.02 * facility
+NMF,7,10,0,0.09 * create + 0.07 * type + 0.04 * entry + 0.04 * deployment + 0.04 * update + 0.02 * image + 0.02 * new + 0.02 * information + 0.02 * slot + 0.02 * add
+NMF,7,10,1,0.16 * get + 0.13 * create + 0.02 * new + 0.02 * update + 0.02 * partition + 0.01 * network + 0.01 * configuration + 0.01 * crud + 0.01 * pay + 0.01 * exist
+NMF,7,10,2,0.17 * delete + 0.06 * exist + 0.03 * order + 0.03 * key + 0.03 * certificate + 0.02 * share + 0.02 * specify + 0.02 * file + 0.01 * revision + 0.01 * item
+NMF,7,10,3,0.27 * list + 0.02 * specify + 0.02 * get + 0.01 * group + 0.01 * cluster + 0.01 * subscription + 0.01 * service + 0.01 * container + 0.01 * project + 0.01 * fabric
+NMF,7,10,4,0.11 * user + 0.09 * specify + 0.05 * retrieve + 0.02 * return + 0.02 * add + 0.02 * account + 0.02 * set + 0.01 * key + 0.01 * current + 0.01 * policy
+NMF,7,10,5,0.07 * update + 0.07 * specific + 0.05 * delete + 0.05 * would + 0.05 * event + 0.04 * resource + 0.04 * group + 0.02 * site + 0.02 * web + 0.01 * plan
+NMF,7,10,6,0.12 * service + 0.08 * get + 0.05 * give + 0.03 * fabric + 0.02 * resource + 0.02 * cluster + 0.02 * list + 0.02 * application + 0.02 * facility + 0.02 * available
+LDA,8,5,0,0.07 * entry + 0.06 * would + 0.05 * item + 0.05 * file + 0.04 * page
+LDA,8,5,1,0.04 * list + 0.04 * get + 0.03 * time + 0.03 * job + 0.03 * status
+LDA,8,5,2,0.11 * list + 0.07 * type + 0.05 * information + 0.04 * service + 0.02 * credit
+LDA,8,5,3,0.11 * update + 0.06 * add + 0.05 * create + 0.04 * search + 0.04 * new
+LDA,8,5,4,0.10 * delete + 0.08 * return + 0.04 * list + 0.02 * give + 0.02 * comment
+LDA,8,5,5,0.09 * user + 0.03 * project + 0.03 * single + 0.03 * pay + 0.03 * schedule
+LDA,8,5,6,0.10 * create + 0.04 * detail + 0.04 * stream + 0.04 * payment + 0.04 * give
+LDA,8,5,7,0.14 * retrieve + 0.06 * list + 0.05 * tag + 0.03 * account + 0.03 * specific
+LDA,8,6,0,0.07 * entry + 0.06 * would + 0.05 * item + 0.05 * file + 0.04 * page + 0.03 * event
+LDA,8,6,1,0.04 * list + 0.04 * get + 0.03 * time + 0.03 * job + 0.03 * status + 0.02 * specify
+LDA,8,6,2,0.11 * list + 0.07 * type + 0.05 * information + 0.04 * service + 0.02 * credit + 0.02 * address
+LDA,8,6,3,0.11 * update + 0.06 * add + 0.05 * create + 0.04 * search + 0.04 * new + 0.03 * video
+LDA,8,6,4,0.10 * delete + 0.08 * return + 0.04 * list + 0.02 * give + 0.02 * comment + 0.02 * record
+LDA,8,6,5,0.09 * user + 0.03 * project + 0.03 * single + 0.03 * pay + 0.03 * schedule + 0.03 * group
+LDA,8,6,6,0.10 * create + 0.04 * detail + 0.04 * stream + 0.04 * payment + 0.04 * give + 0.03 * report
+LDA,8,6,7,0.14 * retrieve + 0.06 * list + 0.05 * tag + 0.03 * account + 0.03 * specific + 0.03 * transaction
+LDA,8,7,0,0.07 * entry + 0.06 * would + 0.05 * item + 0.05 * file + 0.04 * page + 0.03 * event + 0.02 * employee
+LDA,8,7,1,0.04 * list + 0.04 * get + 0.03 * time + 0.03 * job + 0.03 * status + 0.02 * specify + 0.02 * team
+LDA,8,7,2,0.11 * list + 0.07 * type + 0.05 * information + 0.04 * service + 0.02 * credit + 0.02 * address + 0.02 * get
+LDA,8,7,3,0.11 * update + 0.06 * add + 0.05 * create + 0.04 * search + 0.04 * new + 0.03 * video + 0.02 * result
+LDA,8,7,4,0.10 * delete + 0.08 * return + 0.04 * list + 0.02 * give + 0.02 * comment + 0.02 * record + 0.02 * definition
+LDA,8,7,5,0.09 * user + 0.03 * project + 0.03 * single + 0.03 * pay + 0.03 * schedule + 0.03 * group + 0.02 * order
+LDA,8,7,6,0.10 * create + 0.04 * detail + 0.04 * stream + 0.04 * payment + 0.04 * give + 0.03 * report + 0.03 * find
+LDA,8,7,7,0.14 * retrieve + 0.06 * list + 0.05 * tag + 0.03 * account + 0.03 * specific + 0.03 * transaction + 0.02 * collection
+LDA,8,8,0,0.07 * entry + 0.06 * would + 0.05 * item + 0.05 * file + 0.04 * page + 0.03 * event + 0.02 * employee + 0.02 * document
+LDA,8,8,1,0.04 * list + 0.04 * get + 0.03 * time + 0.03 * job + 0.03 * status + 0.02 * specify + 0.02 * team + 0.02 * device
+LDA,8,8,2,0.11 * list + 0.07 * type + 0.05 * information + 0.04 * service + 0.02 * credit + 0.02 * address + 0.02 * get + 0.02 * project
+LDA,8,8,3,0.11 * update + 0.06 * add + 0.05 * create + 0.04 * search + 0.04 * new + 0.03 * video + 0.02 * result + 0.02 * upload
+LDA,8,8,4,0.10 * delete + 0.08 * return + 0.04 * list + 0.02 * give + 0.02 * comment + 0.02 * record + 0.02 * definition + 0.02 * call
+LDA,8,8,5,0.09 * user + 0.03 * project + 0.03 * single + 0.03 * pay + 0.03 * schedule + 0.03 * group + 0.02 * order + 0.02 * target
+LDA,8,8,6,0.10 * create + 0.04 * detail + 0.04 * stream + 0.04 * payment + 0.04 * give + 0.03 * report + 0.03 * find + 0.02 * observation
+LDA,8,8,7,0.14 * retrieve + 0.06 * list + 0.05 * tag + 0.03 * account + 0.03 * specific + 0.03 * transaction + 0.02 * collection + 0.02 * category
+LDA,8,9,0,0.07 * entry + 0.06 * would + 0.05 * item + 0.05 * file + 0.04 * page + 0.03 * event + 0.02 * employee + 0.02 * document + 0.02 * site
+LDA,8,9,1,0.04 * list + 0.04 * get + 0.03 * time + 0.03 * job + 0.03 * status + 0.02 * specify + 0.02 * team + 0.02 * device + 0.02 * player
+LDA,8,9,2,0.11 * list + 0.07 * type + 0.05 * information + 0.04 * service + 0.02 * credit + 0.02 * address + 0.02 * get + 0.02 * project + 0.02 * revision
+LDA,8,9,3,0.11 * update + 0.06 * add + 0.05 * create + 0.04 * search + 0.04 * new + 0.03 * video + 0.02 * result + 0.02 * upload + 0.02 * run
+LDA,8,9,4,0.10 * delete + 0.08 * return + 0.04 * list + 0.02 * give + 0.02 * comment + 0.02 * record + 0.02 * definition + 0.02 * call + 0.02 * code
+LDA,8,9,5,0.09 * user + 0.03 * project + 0.03 * single + 0.03 * pay + 0.03 * schedule + 0.03 * group + 0.02 * order + 0.02 * target + 0.02 * historical
+LDA,8,9,6,0.10 * create + 0.04 * detail + 0.04 * stream + 0.04 * payment + 0.04 * give + 0.03 * report + 0.03 * find + 0.02 * observation + 0.02 * product
+LDA,8,9,7,0.14 * retrieve + 0.06 * list + 0.05 * tag + 0.03 * account + 0.03 * specific + 0.03 * transaction + 0.02 * collection + 0.02 * category + 0.02 * create
+LDA,8,10,0,0.07 * entry + 0.06 * would + 0.05 * item + 0.05 * file + 0.04 * page + 0.03 * event + 0.02 * employee + 0.02 * document + 0.02 * site + 0.02 * line
+LDA,8,10,1,0.04 * list + 0.04 * get + 0.03 * time + 0.03 * job + 0.03 * status + 0.02 * specify + 0.02 * team + 0.02 * device + 0.02 * player + 0.02 * view
+LDA,8,10,2,0.11 * list + 0.07 * type + 0.05 * information + 0.04 * service + 0.02 * credit + 0.02 * address + 0.02 * get + 0.02 * project + 0.02 * revision + 0.02 * rate
+LDA,8,10,3,0.11 * update + 0.06 * add + 0.05 * create + 0.04 * search + 0.04 * new + 0.03 * video + 0.02 * result + 0.02 * upload + 0.02 * run + 0.02 * delete
+LDA,8,10,4,0.10 * delete + 0.08 * return + 0.04 * list + 0.02 * give + 0.02 * comment + 0.02 * record + 0.02 * definition + 0.02 * call + 0.02 * code + 0.02 * entity
+LDA,8,10,5,0.09 * user + 0.03 * project + 0.03 * single + 0.03 * pay + 0.03 * schedule + 0.03 * group + 0.02 * order + 0.02 * target + 0.02 * historical + 0.02 * list
+LDA,8,10,6,0.10 * create + 0.04 * detail + 0.04 * stream + 0.04 * payment + 0.04 * give + 0.03 * report + 0.03 * find + 0.02 * observation + 0.02 * product + 0.02 * fetch
+LDA,8,10,7,0.14 * retrieve + 0.06 * list + 0.05 * tag + 0.03 * account + 0.03 * specific + 0.03 * transaction + 0.02 * collection + 0.02 * category + 0.02 * create + 0.02 * contact
+LSA,8,5,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create
+LSA,8,5,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update
+LSA,8,5,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list
+LSA,8,5,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file
+LSA,8,5,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify
+LSA,8,5,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry
+LSA,8,5,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific
+LSA,8,5,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service
+LSA,8,6,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource
+LSA,8,6,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify
+LSA,8,6,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new
+LSA,8,6,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify
+LSA,8,6,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry
+LSA,8,6,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would
+LSA,8,6,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment
+LSA,8,6,7,0.61 * update + 0.40 * user + -0.39 * create + -0.24 * delete + 0.22 * service + -0.19 * specify
+LSA,8,7,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user
+LSA,8,7,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric
+LSA,8,7,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify
+LSA,8,7,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment
+LSA,8,7,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create
+LSA,8,7,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would + -0.11 * fabric
+LSA,8,7,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get
+LSA,8,7,7,0.61 * update + 0.40 * user + -0.39 * create + -0.24 * delete + 0.22 * service + -0.19 * specify + -0.17 * get
+LSA,8,8,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric
+LSA,8,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,8,8,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric
+LSA,8,8,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot
+LSA,8,8,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would
+LSA,8,8,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give
+LSA,8,8,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot
+LSA,8,8,7,0.61 * update + 0.40 * user + -0.39 * create + -0.24 * delete + 0.22 * service + -0.19 * specify + -0.17 * get + 0.14 * specific
+LSA,8,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,8,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,8,9,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group
+LSA,8,9,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would
+LSA,8,9,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list
+LSA,8,9,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would + -0.11 * fabric + 0.10 * give + 0.09 * site
+LSA,8,9,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get + -0.23 * slot + -0.16 * instance
+LSA,8,9,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get + -0.14 * specific + 0.11 * new
+LSA,8,10,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group + 0.08 * subscription
+LSA,8,10,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new + -0.10 * delete
+LSA,8,10,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group + 0.07 * user
+LSA,8,10,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would + 0.09 * user
+LSA,8,10,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would + 0.11 * list + 0.10 * fabric
+LSA,8,10,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site + -0.09 * slot
+LSA,8,10,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get + -0.23 * slot + -0.16 * instance + -0.15 * process
+LSA,8,10,7,0.61 * update + 0.40 * user + -0.39 * create + -0.24 * delete + 0.22 * service + -0.19 * specify + -0.17 * get + 0.14 * specific + -0.11 * new + 0.10 * group
+NMF,8,5,0,0.08 * retrieve + 0.07 * resource + 0.06 * group + 0.04 * specific + 0.03 * information
+NMF,8,5,1,0.21 * delete + 0.05 * account + 0.03 * exist + 0.02 * web + 0.02 * app
+NMF,8,5,2,0.16 * list + 0.16 * get + 0.03 * specify + 0.02 * detail + 0.02 * available
+NMF,8,5,3,0.08 * specify + 0.05 * specific + 0.04 * delete + 0.03 * would + 0.03 * certificate
+NMF,8,5,4,0.19 * create + 0.09 * update + 0.03 * new + 0.03 * get + 0.03 * network
+NMF,8,5,5,0.13 * user + 0.09 * list + 0.05 * add + 0.03 * file + 0.03 * project
+NMF,8,5,6,0.17 * service + 0.05 * fabric + 0.04 * cluster + 0.04 * update + 0.03 * application
+NMF,8,5,7,0.10 * list + 0.06 * type + 0.05 * group + 0.03 * entry + 0.03 * return
+NMF,8,6,0,0.08 * retrieve + 0.07 * resource + 0.06 * group + 0.04 * specific + 0.03 * information + 0.03 * get
+NMF,8,6,1,0.21 * delete + 0.05 * account + 0.03 * exist + 0.02 * web + 0.02 * app + 0.02 * site
+NMF,8,6,2,0.16 * list + 0.16 * get + 0.03 * specify + 0.02 * detail + 0.02 * available + 0.01 * would
+NMF,8,6,3,0.08 * specify + 0.05 * specific + 0.04 * delete + 0.03 * would + 0.03 * certificate + 0.03 * update
+NMF,8,6,4,0.19 * create + 0.09 * update + 0.03 * new + 0.03 * get + 0.03 * network + 0.01 * virtual
+NMF,8,6,5,0.13 * user + 0.09 * list + 0.05 * add + 0.03 * file + 0.03 * project + 0.02 * name
+NMF,8,6,6,0.17 * service + 0.05 * fabric + 0.04 * cluster + 0.04 * update + 0.03 * application + 0.03 * type
+NMF,8,6,7,0.10 * list + 0.06 * type + 0.05 * group + 0.03 * entry + 0.03 * return + 0.03 * key
+NMF,8,7,0,0.08 * retrieve + 0.07 * resource + 0.06 * group + 0.04 * specific + 0.03 * information + 0.03 * get + 0.02 * give
+NMF,8,7,1,0.21 * delete + 0.05 * account + 0.03 * exist + 0.02 * web + 0.02 * app + 0.02 * site + 0.02 * new
+NMF,8,7,2,0.16 * list + 0.16 * get + 0.03 * specify + 0.02 * detail + 0.02 * available + 0.01 * would + 0.01 * web
+NMF,8,7,3,0.08 * specify + 0.05 * specific + 0.04 * delete + 0.03 * would + 0.03 * certificate + 0.03 * update + 0.02 * key
+NMF,8,7,4,0.19 * create + 0.09 * update + 0.03 * new + 0.03 * get + 0.03 * network + 0.01 * virtual + 0.01 * give
+NMF,8,7,5,0.13 * user + 0.09 * list + 0.05 * add + 0.03 * file + 0.03 * project + 0.02 * name + 0.02 * current
+NMF,8,7,6,0.17 * service + 0.05 * fabric + 0.04 * cluster + 0.04 * update + 0.03 * application + 0.03 * type + 0.03 * resource
+NMF,8,7,7,0.10 * list + 0.06 * type + 0.05 * group + 0.03 * entry + 0.03 * return + 0.03 * key + 0.02 * subscription
+NMF,8,8,0,0.08 * retrieve + 0.07 * resource + 0.06 * group + 0.04 * specific + 0.03 * information + 0.03 * get + 0.02 * give + 0.02 * find
+NMF,8,8,1,0.21 * delete + 0.05 * account + 0.03 * exist + 0.02 * web + 0.02 * app + 0.02 * site + 0.02 * new + 0.02 * domain
+NMF,8,8,2,0.16 * list + 0.16 * get + 0.03 * specify + 0.02 * detail + 0.02 * available + 0.01 * would + 0.01 * web + 0.01 * site
+NMF,8,8,3,0.08 * specify + 0.05 * specific + 0.04 * delete + 0.03 * would + 0.03 * certificate + 0.03 * update + 0.02 * key + 0.02 * return
+NMF,8,8,4,0.19 * create + 0.09 * update + 0.03 * new + 0.03 * get + 0.03 * network + 0.01 * virtual + 0.01 * give + 0.01 * specify
+NMF,8,8,5,0.13 * user + 0.09 * list + 0.05 * add + 0.03 * file + 0.03 * project + 0.02 * name + 0.02 * current + 0.02 * exist
+NMF,8,8,6,0.17 * service + 0.05 * fabric + 0.04 * cluster + 0.04 * update + 0.03 * application + 0.03 * type + 0.03 * resource + 0.02 * specify
+NMF,8,8,7,0.10 * list + 0.06 * type + 0.05 * group + 0.03 * entry + 0.03 * return + 0.03 * key + 0.02 * subscription + 0.02 * event
+NMF,8,9,0,0.08 * retrieve + 0.07 * resource + 0.06 * group + 0.04 * specific + 0.03 * information + 0.03 * get + 0.02 * give + 0.02 * find + 0.02 * detail
+NMF,8,9,1,0.21 * delete + 0.05 * account + 0.03 * exist + 0.02 * web + 0.02 * app + 0.02 * site + 0.02 * new + 0.02 * domain + 0.01 * deployment
+NMF,8,9,2,0.16 * list + 0.16 * get + 0.03 * specify + 0.02 * detail + 0.02 * available + 0.01 * would + 0.01 * web + 0.01 * site + 0.01 * slot
+NMF,8,9,3,0.08 * specify + 0.05 * specific + 0.04 * delete + 0.03 * would + 0.03 * certificate + 0.03 * update + 0.02 * key + 0.02 * return + 0.02 * job
+NMF,8,9,4,0.19 * create + 0.09 * update + 0.03 * new + 0.03 * get + 0.03 * network + 0.01 * virtual + 0.01 * give + 0.01 * specify + 0.01 * name
+NMF,8,9,5,0.13 * user + 0.09 * list + 0.05 * add + 0.03 * file + 0.03 * project + 0.02 * name + 0.02 * current + 0.02 * exist + 0.01 * give
+NMF,8,9,6,0.17 * service + 0.05 * fabric + 0.04 * cluster + 0.04 * update + 0.03 * application + 0.03 * type + 0.03 * resource + 0.02 * specify + 0.02 * facility
+NMF,8,9,7,0.10 * list + 0.06 * type + 0.05 * group + 0.03 * entry + 0.03 * return + 0.03 * key + 0.02 * subscription + 0.02 * event + 0.02 * task
+NMF,8,10,0,0.08 * retrieve + 0.07 * resource + 0.06 * group + 0.04 * specific + 0.03 * information + 0.03 * get + 0.02 * give + 0.02 * find + 0.02 * detail + 0.02 * package
+NMF,8,10,1,0.21 * delete + 0.05 * account + 0.03 * exist + 0.02 * web + 0.02 * app + 0.02 * site + 0.02 * new + 0.02 * domain + 0.01 * deployment + 0.01 * create
+NMF,8,10,2,0.16 * list + 0.16 * get + 0.03 * specify + 0.02 * detail + 0.02 * available + 0.01 * would + 0.01 * web + 0.01 * site + 0.01 * slot + 0.01 * node
+NMF,8,10,3,0.08 * specify + 0.05 * specific + 0.04 * delete + 0.03 * would + 0.03 * certificate + 0.03 * update + 0.02 * key + 0.02 * return + 0.02 * job + 0.02 * subscription
+NMF,8,10,4,0.19 * create + 0.09 * update + 0.03 * new + 0.03 * get + 0.03 * network + 0.01 * virtual + 0.01 * give + 0.01 * specify + 0.01 * name + 0.01 * exist
+NMF,8,10,5,0.13 * user + 0.09 * list + 0.05 * add + 0.03 * file + 0.03 * project + 0.02 * name + 0.02 * current + 0.02 * exist + 0.01 * give + 0.01 * new
+NMF,8,10,6,0.17 * service + 0.05 * fabric + 0.04 * cluster + 0.04 * update + 0.03 * application + 0.03 * type + 0.03 * resource + 0.02 * specify + 0.02 * facility + 0.02 * detailed
+NMF,8,10,7,0.10 * list + 0.06 * type + 0.05 * group + 0.03 * entry + 0.03 * return + 0.03 * key + 0.02 * subscription + 0.02 * event + 0.02 * task + 0.02 * retrieve
+LDA,9,5,0,0.08 * would + 0.03 * event + 0.03 * order + 0.03 * specific + 0.03 * time
+LDA,9,5,1,0.06 * schedule + 0.05 * list + 0.05 * account + 0.03 * historical + 0.03 * file
+LDA,9,5,2,0.08 * type + 0.06 * information + 0.05 * service + 0.04 * page + 0.04 * list
+LDA,9,5,3,0.13 * create + 0.10 * update + 0.06 * add + 0.04 * new + 0.03 * target
+LDA,9,5,4,0.14 * delete + 0.07 * project + 0.04 * list + 0.03 * image + 0.03 * set
+LDA,9,5,5,0.13 * user + 0.06 * entry + 0.04 * pay + 0.04 * single + 0.03 * current
+LDA,9,5,6,0.05 * search + 0.05 * payment + 0.04 * stream + 0.04 * create + 0.04 * give
+LDA,9,5,7,0.06 * tag + 0.04 * group + 0.04 * list + 0.04 * transaction + 0.03 * date
+LDA,9,5,8,0.13 * list + 0.10 * retrieve + 0.06 * item + 0.04 * detail + 0.04 * return
+LDA,9,6,0,0.08 * would + 0.03 * event + 0.03 * order + 0.03 * specific + 0.03 * time + 0.03 * return
+LDA,9,6,1,0.06 * schedule + 0.05 * list + 0.05 * account + 0.03 * historical + 0.03 * file + 0.03 * get
+LDA,9,6,2,0.08 * type + 0.06 * information + 0.05 * service + 0.04 * page + 0.04 * list + 0.03 * address
+LDA,9,6,3,0.13 * create + 0.10 * update + 0.06 * add + 0.04 * new + 0.03 * target + 0.03 * run
+LDA,9,6,4,0.14 * delete + 0.07 * project + 0.04 * list + 0.03 * image + 0.03 * set + 0.03 * definition
+LDA,9,6,5,0.13 * user + 0.06 * entry + 0.04 * pay + 0.04 * single + 0.03 * current + 0.03 * return
+LDA,9,6,6,0.05 * search + 0.05 * payment + 0.04 * stream + 0.04 * create + 0.04 * give + 0.04 * report
+LDA,9,6,7,0.06 * tag + 0.04 * group + 0.04 * list + 0.04 * transaction + 0.03 * date + 0.03 * document
+LDA,9,6,8,0.13 * list + 0.10 * retrieve + 0.06 * item + 0.04 * detail + 0.04 * return + 0.02 * category
+LDA,9,7,0,0.08 * would + 0.03 * event + 0.03 * order + 0.03 * specific + 0.03 * time + 0.03 * return + 0.03 * site
+LDA,9,7,1,0.06 * schedule + 0.05 * list + 0.05 * account + 0.03 * historical + 0.03 * file + 0.03 * get + 0.03 * city
+LDA,9,7,2,0.08 * type + 0.06 * information + 0.05 * service + 0.04 * page + 0.04 * list + 0.03 * address + 0.02 * get
+LDA,9,7,3,0.13 * create + 0.10 * update + 0.06 * add + 0.04 * new + 0.03 * target + 0.03 * run + 0.02 * upload
+LDA,9,7,4,0.14 * delete + 0.07 * project + 0.04 * list + 0.03 * image + 0.03 * set + 0.03 * definition + 0.02 * record
+LDA,9,7,5,0.13 * user + 0.06 * entry + 0.04 * pay + 0.04 * single + 0.03 * current + 0.03 * return + 0.03 * employee
+LDA,9,7,6,0.05 * search + 0.05 * payment + 0.04 * stream + 0.04 * create + 0.04 * give + 0.04 * report + 0.03 * find
+LDA,9,7,7,0.06 * tag + 0.04 * group + 0.04 * list + 0.04 * transaction + 0.03 * date + 0.03 * document + 0.03 * number
+LDA,9,7,8,0.13 * list + 0.10 * retrieve + 0.06 * item + 0.04 * detail + 0.04 * return + 0.02 * category + 0.02 * team
+LDA,9,8,0,0.08 * would + 0.03 * event + 0.03 * order + 0.03 * specific + 0.03 * time + 0.03 * return + 0.03 * site + 0.03 * template
+LDA,9,8,1,0.06 * schedule + 0.05 * list + 0.05 * account + 0.03 * historical + 0.03 * file + 0.03 * get + 0.03 * city + 0.03 * specify
+LDA,9,8,2,0.08 * type + 0.06 * information + 0.05 * service + 0.04 * page + 0.04 * list + 0.03 * address + 0.02 * get + 0.02 * rate
+LDA,9,8,3,0.13 * create + 0.10 * update + 0.06 * add + 0.04 * new + 0.03 * target + 0.03 * run + 0.02 * upload + 0.02 * contact
+LDA,9,8,4,0.14 * delete + 0.07 * project + 0.04 * list + 0.03 * image + 0.03 * set + 0.03 * definition + 0.02 * record + 0.02 * create
+LDA,9,8,5,0.13 * user + 0.06 * entry + 0.04 * pay + 0.04 * single + 0.03 * current + 0.03 * return + 0.03 * employee + 0.02 * log
+LDA,9,8,6,0.05 * search + 0.05 * payment + 0.04 * stream + 0.04 * create + 0.04 * give + 0.04 * report + 0.03 * find + 0.02 * observation
+LDA,9,8,7,0.06 * tag + 0.04 * group + 0.04 * list + 0.04 * transaction + 0.03 * date + 0.03 * document + 0.03 * number + 0.03 * create
+LDA,9,8,8,0.13 * list + 0.10 * retrieve + 0.06 * item + 0.04 * detail + 0.04 * return + 0.02 * category + 0.02 * team + 0.02 * status
+LDA,9,9,0,0.08 * would + 0.03 * event + 0.03 * order + 0.03 * specific + 0.03 * time + 0.03 * return + 0.03 * site + 0.03 * template + 0.02 * member
+LDA,9,9,1,0.06 * schedule + 0.05 * list + 0.05 * account + 0.03 * historical + 0.03 * file + 0.03 * get + 0.03 * city + 0.03 * specify + 0.02 * value
+LDA,9,9,2,0.08 * type + 0.06 * information + 0.05 * service + 0.04 * page + 0.04 * list + 0.03 * address + 0.02 * get + 0.02 * rate + 0.02 * usage
+LDA,9,9,3,0.13 * create + 0.10 * update + 0.06 * add + 0.04 * new + 0.03 * target + 0.03 * run + 0.02 * upload + 0.02 * contact + 0.02 * customer
+LDA,9,9,4,0.14 * delete + 0.07 * project + 0.04 * list + 0.03 * image + 0.03 * set + 0.03 * definition + 0.02 * record + 0.02 * create + 0.02 * custom
+LDA,9,9,5,0.13 * user + 0.06 * entry + 0.04 * pay + 0.04 * single + 0.03 * current + 0.03 * return + 0.03 * employee + 0.02 * log + 0.02 * email
+LDA,9,9,6,0.05 * search + 0.05 * payment + 0.04 * stream + 0.04 * create + 0.04 * give + 0.04 * report + 0.03 * find + 0.02 * observation + 0.02 * credit
+LDA,9,9,7,0.06 * tag + 0.04 * group + 0.04 * list + 0.04 * transaction + 0.03 * date + 0.03 * document + 0.03 * number + 0.03 * create + 0.03 * entity
+LDA,9,9,8,0.13 * list + 0.10 * retrieve + 0.06 * item + 0.04 * detail + 0.04 * return + 0.02 * category + 0.02 * team + 0.02 * status + 0.02 * revision
+LDA,9,10,0,0.08 * would + 0.03 * event + 0.03 * order + 0.03 * specific + 0.03 * time + 0.03 * return + 0.03 * site + 0.03 * template + 0.02 * member + 0.02 * line
+LDA,9,10,1,0.06 * schedule + 0.05 * list + 0.05 * account + 0.03 * historical + 0.03 * file + 0.03 * get + 0.03 * city + 0.03 * specify + 0.02 * value + 0.02 * call
+LDA,9,10,2,0.08 * type + 0.06 * information + 0.05 * service + 0.04 * page + 0.04 * list + 0.03 * address + 0.02 * get + 0.02 * rate + 0.02 * usage + 0.02 * station
+LDA,9,10,3,0.13 * create + 0.10 * update + 0.06 * add + 0.04 * new + 0.03 * target + 0.03 * run + 0.02 * upload + 0.02 * contact + 0.02 * customer + 0.02 * active
+LDA,9,10,4,0.14 * delete + 0.07 * project + 0.04 * list + 0.03 * image + 0.03 * set + 0.03 * definition + 0.02 * record + 0.02 * create + 0.02 * custom + 0.02 * field
+LDA,9,10,5,0.13 * user + 0.06 * entry + 0.04 * pay + 0.04 * single + 0.03 * current + 0.03 * return + 0.03 * employee + 0.02 * log + 0.02 * email + 0.02 * map
+LDA,9,10,6,0.05 * search + 0.05 * payment + 0.04 * stream + 0.04 * create + 0.04 * give + 0.04 * report + 0.03 * find + 0.02 * observation + 0.02 * credit + 0.02 * product
+LDA,9,10,7,0.06 * tag + 0.04 * group + 0.04 * list + 0.04 * transaction + 0.03 * date + 0.03 * document + 0.03 * number + 0.03 * create + 0.03 * entity + 0.02 * retrieve
+LDA,9,10,8,0.13 * list + 0.10 * retrieve + 0.06 * item + 0.04 * detail + 0.04 * return + 0.02 * category + 0.02 * team + 0.02 * status + 0.02 * revision + 0.02 * get
+LSA,9,5,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create
+LSA,9,5,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update
+LSA,9,5,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list
+LSA,9,5,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file
+LSA,9,5,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify
+LSA,9,5,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry
+LSA,9,5,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific
+LSA,9,5,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service
+LSA,9,5,8,0.60 * user + -0.57 * update + 0.21 * create + 0.17 * return + 0.15 * would
+LSA,9,6,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource
+LSA,9,6,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify
+LSA,9,6,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new
+LSA,9,6,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify
+LSA,9,6,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry
+LSA,9,6,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would
+LSA,9,6,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment
+LSA,9,6,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify
+LSA,9,6,8,-0.60 * user + 0.57 * update + -0.21 * create + -0.17 * return + -0.15 * would + 0.14 * delete
+LSA,9,7,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user
+LSA,9,7,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric
+LSA,9,7,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify
+LSA,9,7,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment
+LSA,9,7,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create
+LSA,9,7,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric
+LSA,9,7,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get
+LSA,9,7,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get
+LSA,9,7,8,-0.60 * user + 0.57 * update + -0.21 * create + -0.17 * return + -0.15 * would + 0.14 * delete + 0.14 * get
+LSA,9,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,9,8,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource
+LSA,9,8,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric
+LSA,9,8,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot
+LSA,9,8,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would
+LSA,9,8,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give
+LSA,9,8,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot
+LSA,9,8,7,0.61 * update + 0.40 * user + -0.39 * create + -0.24 * delete + 0.22 * service + -0.19 * specify + -0.17 * get + 0.14 * specific
+LSA,9,8,8,-0.60 * user + 0.57 * update + -0.21 * create + -0.17 * return + -0.15 * would + 0.14 * delete + 0.14 * get + -0.13 * service
+LSA,9,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,9,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,9,9,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group
+LSA,9,9,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot + -0.09 * would
+LSA,9,9,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would + 0.11 * list
+LSA,9,9,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site
+LSA,9,9,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment + 0.23 * get + -0.23 * slot + -0.16 * instance
+LSA,9,9,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get + -0.14 * specific + 0.11 * new
+LSA,9,9,8,0.60 * user + -0.58 * update + 0.21 * create + 0.17 * return + 0.15 * would + -0.14 * delete + -0.14 * get + 0.13 * service + -0.12 * specify
+LSA,9,10,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user + -0.10 * fabric + -0.09 * group + -0.08 * subscription
+LSA,9,10,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource + -0.11 * new + -0.10 * delete
+LSA,9,10,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group + 0.07 * user
+LSA,9,10,3,-0.69 * type + -0.52 * entry + 0.26 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * slot + 0.09 * deployment + 0.09 * would + 0.09 * user
+LSA,9,10,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list + -0.10 * fabric
+LSA,9,10,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site + -0.09 * slot
+LSA,9,10,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot + 0.16 * instance + 0.15 * process
+LSA,9,10,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get + -0.14 * specific + 0.11 * new + -0.10 * group
+LSA,9,10,8,0.60 * user + -0.57 * update + 0.21 * create + 0.17 * return + 0.15 * would + -0.14 * delete + -0.14 * get + 0.13 * service + -0.12 * specify + 0.11 * give
+NMF,9,5,0,0.14 * key + 0.07 * information + 0.05 * specify + 0.03 * delete + 0.02 * version
+NMF,9,5,1,0.12 * specify + 0.08 * list + 0.07 * service + 0.04 * get + 0.03 * resource
+NMF,9,5,2,0.16 * delete + 0.06 * app + 0.04 * get + 0.04 * account + 0.04 * service
+NMF,9,5,3,0.07 * user + 0.07 * create + 0.05 * return + 0.04 * new + 0.04 * file
+NMF,9,5,4,0.11 * give + 0.08 * get + 0.03 * available + 0.03 * list + 0.03 * name
+NMF,9,5,5,0.13 * retrieve + 0.04 * group + 0.04 * specific + 0.03 * set + 0.03 * add
+NMF,9,5,6,0.14 * update + 0.12 * create + 0.08 * service + 0.05 * resource + 0.03 * group
+NMF,9,5,7,0.28 * list + 0.03 * specific + 0.02 * user + 0.02 * type + 0.02 * would
+NMF,9,5,8,0.13 * get + 0.04 * type + 0.04 * event + 0.03 * job + 0.03 * site
+NMF,9,6,0,0.14 * key + 0.07 * information + 0.05 * specify + 0.03 * delete + 0.02 * version + 0.02 * store
+NMF,9,6,1,0.12 * specify + 0.08 * list + 0.07 * service + 0.04 * get + 0.03 * resource + 0.03 * subscription
+NMF,9,6,2,0.16 * delete + 0.06 * app + 0.04 * get + 0.04 * account + 0.04 * service + 0.02 * exist
+NMF,9,6,3,0.07 * user + 0.07 * create + 0.05 * return + 0.04 * new + 0.04 * file + 0.02 * image
+NMF,9,6,4,0.11 * give + 0.08 * get + 0.03 * available + 0.03 * list + 0.03 * name + 0.03 * return
+NMF,9,6,5,0.13 * retrieve + 0.04 * group + 0.04 * specific + 0.03 * set + 0.03 * add + 0.02 * would
+NMF,9,6,6,0.14 * update + 0.12 * create + 0.08 * service + 0.05 * resource + 0.03 * group + 0.02 * exist
+NMF,9,6,7,0.28 * list + 0.03 * specific + 0.02 * user + 0.02 * type + 0.02 * would + 0.02 * site
+NMF,9,6,8,0.13 * get + 0.04 * type + 0.04 * event + 0.03 * job + 0.03 * site + 0.02 * information
+NMF,9,7,0,0.14 * key + 0.07 * information + 0.05 * specify + 0.03 * delete + 0.02 * version + 0.02 * store + 0.02 * vault
+NMF,9,7,1,0.12 * specify + 0.08 * list + 0.07 * service + 0.04 * get + 0.03 * resource + 0.03 * subscription + 0.03 * fabric
+NMF,9,7,2,0.16 * delete + 0.06 * app + 0.04 * get + 0.04 * account + 0.04 * service + 0.02 * exist + 0.02 * use
+NMF,9,7,3,0.07 * user + 0.07 * create + 0.05 * return + 0.04 * new + 0.04 * file + 0.02 * image + 0.02 * would
+NMF,9,7,4,0.11 * give + 0.08 * get + 0.03 * available + 0.03 * list + 0.03 * name + 0.03 * return + 0.02 * observation
+NMF,9,7,5,0.13 * retrieve + 0.04 * group + 0.04 * specific + 0.03 * set + 0.03 * add + 0.02 * would + 0.02 * delete
+NMF,9,7,6,0.14 * update + 0.12 * create + 0.08 * service + 0.05 * resource + 0.03 * group + 0.02 * exist + 0.02 * fabric
+NMF,9,7,7,0.28 * list + 0.03 * specific + 0.02 * user + 0.02 * type + 0.02 * would + 0.02 * site + 0.02 * web
+NMF,9,7,8,0.13 * get + 0.04 * type + 0.04 * event + 0.03 * job + 0.03 * site + 0.02 * information + 0.02 * entry
+NMF,9,8,0,0.14 * key + 0.07 * information + 0.05 * specify + 0.03 * delete + 0.02 * version + 0.02 * store + 0.02 * vault + 0.02 * available
+NMF,9,8,1,0.12 * specify + 0.08 * list + 0.07 * service + 0.04 * get + 0.03 * resource + 0.03 * subscription + 0.03 * fabric + 0.02 * network
+NMF,9,8,2,0.16 * delete + 0.06 * app + 0.04 * get + 0.04 * account + 0.04 * service + 0.02 * exist + 0.02 * use + 0.02 * plan
+NMF,9,8,3,0.07 * user + 0.07 * create + 0.05 * return + 0.04 * new + 0.04 * file + 0.02 * image + 0.02 * would + 0.02 * detail
+NMF,9,8,4,0.11 * give + 0.08 * get + 0.03 * available + 0.03 * list + 0.03 * name + 0.03 * return + 0.02 * observation + 0.01 * entity
+NMF,9,8,5,0.13 * retrieve + 0.04 * group + 0.04 * specific + 0.03 * set + 0.03 * add + 0.02 * would + 0.02 * delete + 0.02 * policy
+NMF,9,8,6,0.14 * update + 0.12 * create + 0.08 * service + 0.05 * resource + 0.03 * group + 0.02 * exist + 0.02 * fabric + 0.01 * type
+NMF,9,8,7,0.28 * list + 0.03 * specific + 0.02 * user + 0.02 * type + 0.02 * would + 0.02 * site + 0.02 * web + 0.01 * project
+NMF,9,8,8,0.13 * get + 0.04 * type + 0.04 * event + 0.03 * job + 0.03 * site + 0.02 * information + 0.02 * entry + 0.02 * web
+NMF,9,9,0,0.14 * key + 0.07 * information + 0.05 * specify + 0.03 * delete + 0.02 * version + 0.02 * store + 0.02 * vault + 0.02 * available + 0.01 * currently
+NMF,9,9,1,0.12 * specify + 0.08 * list + 0.07 * service + 0.04 * get + 0.03 * resource + 0.03 * subscription + 0.03 * fabric + 0.02 * network + 0.02 * deployment
+NMF,9,9,2,0.16 * delete + 0.06 * app + 0.04 * get + 0.04 * account + 0.04 * service + 0.02 * exist + 0.02 * use + 0.02 * plan + 0.02 * application
+NMF,9,9,3,0.07 * user + 0.07 * create + 0.05 * return + 0.04 * new + 0.04 * file + 0.02 * image + 0.02 * would + 0.02 * detail + 0.01 * upload
+NMF,9,9,4,0.11 * give + 0.08 * get + 0.03 * available + 0.03 * list + 0.03 * name + 0.03 * return + 0.02 * observation + 0.01 * entity + 0.01 * deployment
+NMF,9,9,5,0.13 * retrieve + 0.04 * group + 0.04 * specific + 0.03 * set + 0.03 * add + 0.02 * would + 0.02 * delete + 0.02 * policy + 0.02 * share
+NMF,9,9,6,0.14 * update + 0.12 * create + 0.08 * service + 0.05 * resource + 0.03 * group + 0.02 * exist + 0.02 * fabric + 0.01 * type + 0.01 * new
+NMF,9,9,7,0.28 * list + 0.03 * specific + 0.02 * user + 0.02 * type + 0.02 * would + 0.02 * site + 0.02 * web + 0.01 * project + 0.01 * task
+NMF,9,9,8,0.13 * get + 0.04 * type + 0.04 * event + 0.03 * job + 0.03 * site + 0.02 * information + 0.02 * entry + 0.02 * web + 0.02 * single
+NMF,9,10,0,0.14 * key + 0.07 * information + 0.05 * specify + 0.03 * delete + 0.02 * version + 0.02 * store + 0.02 * vault + 0.02 * available + 0.01 * currently + 0.01 * user
+NMF,9,10,1,0.12 * specify + 0.08 * list + 0.07 * service + 0.04 * get + 0.03 * resource + 0.03 * subscription + 0.03 * fabric + 0.02 * network + 0.02 * deployment + 0.01 * vault
+NMF,9,10,2,0.16 * delete + 0.06 * app + 0.04 * get + 0.04 * account + 0.04 * service + 0.02 * exist + 0.02 * use + 0.02 * plan + 0.02 * application + 0.02 * cluster
+NMF,9,10,3,0.07 * user + 0.07 * create + 0.05 * return + 0.04 * new + 0.04 * file + 0.02 * image + 0.02 * would + 0.02 * detail + 0.01 * upload + 0.01 * search
+NMF,9,10,4,0.11 * give + 0.08 * get + 0.03 * available + 0.03 * list + 0.03 * name + 0.03 * return + 0.02 * observation + 0.01 * entity + 0.01 * deployment + 0.01 * pool
+NMF,9,10,5,0.13 * retrieve + 0.04 * group + 0.04 * specific + 0.03 * set + 0.03 * add + 0.02 * would + 0.02 * delete + 0.02 * policy + 0.02 * share + 0.02 * subscription
+NMF,9,10,6,0.14 * update + 0.12 * create + 0.08 * service + 0.05 * resource + 0.03 * group + 0.02 * exist + 0.02 * fabric + 0.01 * type + 0.01 * new + 0.01 * policy
+NMF,9,10,7,0.28 * list + 0.03 * specific + 0.02 * user + 0.02 * type + 0.02 * would + 0.02 * site + 0.02 * web + 0.01 * project + 0.01 * task + 0.01 * instance
+NMF,9,10,8,0.13 * get + 0.04 * type + 0.04 * event + 0.03 * job + 0.03 * site + 0.02 * information + 0.02 * entry + 0.02 * web + 0.02 * single + 0.01 * container
+LDA,10,5,0,0.11 * item + 0.11 * would + 0.06 * specific + 0.04 * event + 0.04 * site
+LDA,10,5,1,0.07 * schedule + 0.06 * list + 0.05 * get + 0.04 * time + 0.04 * transaction
+LDA,10,5,2,0.13 * list + 0.05 * information + 0.04 * service + 0.04 * page + 0.03 * address
+LDA,10,5,3,0.11 * delete + 0.07 * add + 0.04 * create + 0.04 * target + 0.03 * new
+LDA,10,5,4,0.08 * return + 0.07 * user + 0.06 * list + 0.05 * order + 0.04 * file
+LDA,10,5,5,0.07 * project + 0.05 * pay + 0.04 * user + 0.04 * provide + 0.04 * video
+LDA,10,5,6,0.06 * entry + 0.06 * type + 0.05 * detail + 0.05 * stream + 0.04 * payment
+LDA,10,5,7,0.15 * retrieve + 0.06 * tag + 0.05 * list + 0.03 * category + 0.03 * collection
+LDA,10,5,8,0.07 * list + 0.04 * job + 0.04 * user + 0.03 * email + 0.03 * fetch
+LDA,10,5,9,0.11 * create + 0.10 * update + 0.04 * account + 0.03 * report + 0.03 * historical
+LDA,10,6,0,0.11 * item + 0.11 * would + 0.06 * specific + 0.04 * event + 0.04 * site + 0.03 * line
+LDA,10,6,1,0.07 * schedule + 0.06 * list + 0.05 * get + 0.04 * time + 0.04 * transaction + 0.04 * search
+LDA,10,6,2,0.13 * list + 0.05 * information + 0.04 * service + 0.04 * page + 0.03 * address + 0.02 * revision
+LDA,10,6,3,0.11 * delete + 0.07 * add + 0.04 * create + 0.04 * target + 0.03 * new + 0.02 * version
+LDA,10,6,4,0.08 * return + 0.07 * user + 0.06 * list + 0.05 * order + 0.04 * file + 0.03 * remove
+LDA,10,6,5,0.07 * project + 0.05 * pay + 0.04 * user + 0.04 * provide + 0.04 * video + 0.04 * return
+LDA,10,6,6,0.06 * entry + 0.06 * type + 0.05 * detail + 0.05 * stream + 0.04 * payment + 0.04 * create
+LDA,10,6,7,0.15 * retrieve + 0.06 * tag + 0.05 * list + 0.03 * category + 0.03 * collection + 0.03 * document
+LDA,10,6,8,0.07 * list + 0.04 * job + 0.04 * user + 0.03 * email + 0.03 * fetch + 0.03 * run
+LDA,10,6,9,0.11 * create + 0.10 * update + 0.04 * account + 0.03 * report + 0.03 * historical + 0.03 * group
+LDA,10,7,0,0.11 * item + 0.11 * would + 0.06 * specific + 0.04 * event + 0.04 * site + 0.03 * line + 0.02 * message
+LDA,10,7,1,0.07 * schedule + 0.06 * list + 0.05 * get + 0.04 * time + 0.04 * transaction + 0.04 * search + 0.04 * specify
+LDA,10,7,2,0.13 * list + 0.05 * information + 0.04 * service + 0.04 * page + 0.03 * address + 0.02 * revision + 0.02 * get
+LDA,10,7,3,0.11 * delete + 0.07 * add + 0.04 * create + 0.04 * target + 0.03 * new + 0.02 * version + 0.02 * upload
+LDA,10,7,4,0.08 * return + 0.07 * user + 0.06 * list + 0.05 * order + 0.04 * file + 0.03 * remove + 0.03 * image
+LDA,10,7,5,0.07 * project + 0.05 * pay + 0.04 * user + 0.04 * provide + 0.04 * video + 0.04 * return + 0.03 * current
+LDA,10,7,6,0.06 * entry + 0.06 * type + 0.05 * detail + 0.05 * stream + 0.04 * payment + 0.04 * create + 0.03 * single
+LDA,10,7,7,0.15 * retrieve + 0.06 * tag + 0.05 * list + 0.03 * category + 0.03 * collection + 0.03 * document + 0.02 * team
+LDA,10,7,8,0.07 * list + 0.04 * job + 0.04 * user + 0.03 * email + 0.03 * fetch + 0.03 * run + 0.02 * device
+LDA,10,7,9,0.11 * create + 0.10 * update + 0.04 * account + 0.03 * report + 0.03 * historical + 0.03 * group + 0.03 * find
+LDA,10,8,0,0.11 * item + 0.11 * would + 0.06 * specific + 0.04 * event + 0.04 * site + 0.03 * line + 0.02 * message + 0.02 * deployment
+LDA,10,8,1,0.07 * schedule + 0.06 * list + 0.05 * get + 0.04 * time + 0.04 * transaction + 0.04 * search + 0.04 * specify + 0.03 * city
+LDA,10,8,2,0.13 * list + 0.05 * information + 0.04 * service + 0.04 * page + 0.03 * address + 0.02 * revision + 0.02 * get + 0.02 * object
+LDA,10,8,3,0.11 * delete + 0.07 * add + 0.04 * create + 0.04 * target + 0.03 * new + 0.02 * version + 0.02 * upload + 0.02 * contact
+LDA,10,8,4,0.08 * return + 0.07 * user + 0.06 * list + 0.05 * order + 0.04 * file + 0.03 * remove + 0.03 * image + 0.02 * give
+LDA,10,8,5,0.07 * project + 0.05 * pay + 0.04 * user + 0.04 * provide + 0.04 * video + 0.04 * return + 0.03 * current + 0.03 * log
+LDA,10,8,6,0.06 * entry + 0.06 * type + 0.05 * detail + 0.05 * stream + 0.04 * payment + 0.04 * create + 0.03 * single + 0.03 * observation
+LDA,10,8,7,0.15 * retrieve + 0.06 * tag + 0.05 * list + 0.03 * category + 0.03 * collection + 0.03 * document + 0.02 * team + 0.02 * entity
+LDA,10,8,8,0.07 * list + 0.04 * job + 0.04 * user + 0.03 * email + 0.03 * fetch + 0.03 * run + 0.02 * device + 0.02 * status
+LDA,10,8,9,0.11 * create + 0.10 * update + 0.04 * account + 0.03 * report + 0.03 * historical + 0.03 * group + 0.03 * find + 0.03 * credit
+LDA,10,9,0,0.11 * item + 0.11 * would + 0.06 * specific + 0.04 * event + 0.04 * site + 0.03 * line + 0.02 * message + 0.02 * deployment + 0.02 * definition
+LDA,10,9,1,0.07 * schedule + 0.06 * list + 0.05 * get + 0.04 * time + 0.04 * transaction + 0.04 * search + 0.04 * specify + 0.03 * city + 0.03 * template
+LDA,10,9,2,0.13 * list + 0.05 * information + 0.04 * service + 0.04 * page + 0.03 * address + 0.02 * revision + 0.02 * get + 0.02 * object + 0.02 * rate
+LDA,10,9,3,0.11 * delete + 0.07 * add + 0.04 * create + 0.04 * target + 0.03 * new + 0.02 * version + 0.02 * upload + 0.02 * contact + 0.02 * customer
+LDA,10,9,4,0.08 * return + 0.07 * user + 0.06 * list + 0.05 * order + 0.04 * file + 0.03 * remove + 0.03 * image + 0.02 * give + 0.02 * delete
+LDA,10,9,5,0.07 * project + 0.05 * pay + 0.04 * user + 0.04 * provide + 0.04 * video + 0.04 * return + 0.03 * current + 0.03 * log + 0.03 * record
+LDA,10,9,6,0.06 * entry + 0.06 * type + 0.05 * detail + 0.05 * stream + 0.04 * payment + 0.04 * create + 0.03 * single + 0.03 * observation + 0.03 * employee
+LDA,10,9,7,0.15 * retrieve + 0.06 * tag + 0.05 * list + 0.03 * category + 0.03 * collection + 0.03 * document + 0.02 * team + 0.02 * entity + 0.02 * user
+LDA,10,9,8,0.07 * list + 0.04 * job + 0.04 * user + 0.03 * email + 0.03 * fetch + 0.03 * run + 0.02 * device + 0.02 * status + 0.02 * profile
+LDA,10,9,9,0.11 * create + 0.10 * update + 0.04 * account + 0.03 * report + 0.03 * historical + 0.03 * group + 0.03 * find + 0.03 * credit + 0.02 * summary
+LDA,10,10,0,0.11 * item + 0.11 * would + 0.06 * specific + 0.04 * event + 0.04 * site + 0.03 * line + 0.02 * message + 0.02 * deployment + 0.02 * definition + 0.02 * delete
+LDA,10,10,1,0.07 * schedule + 0.06 * list + 0.05 * get + 0.04 * time + 0.04 * transaction + 0.04 * search + 0.04 * specify + 0.03 * city + 0.03 * template + 0.03 * value
+LDA,10,10,2,0.13 * list + 0.05 * information + 0.04 * service + 0.04 * page + 0.03 * address + 0.02 * revision + 0.02 * get + 0.02 * object + 0.02 * rate + 0.02 * plan
+LDA,10,10,3,0.11 * delete + 0.07 * add + 0.04 * create + 0.04 * target + 0.03 * new + 0.02 * version + 0.02 * upload + 0.02 * contact + 0.02 * customer + 0.02 * update
+LDA,10,10,4,0.08 * return + 0.07 * user + 0.06 * list + 0.05 * order + 0.04 * file + 0.03 * remove + 0.03 * image + 0.02 * give + 0.02 * delete + 0.02 * comment
+LDA,10,10,5,0.07 * project + 0.05 * pay + 0.04 * user + 0.04 * provide + 0.04 * video + 0.04 * return + 0.03 * current + 0.03 * log + 0.03 * record + 0.03 * map
+LDA,10,10,6,0.06 * entry + 0.06 * type + 0.05 * detail + 0.05 * stream + 0.04 * payment + 0.04 * create + 0.03 * single + 0.03 * observation + 0.03 * employee + 0.03 * product
+LDA,10,10,7,0.15 * retrieve + 0.06 * tag + 0.05 * list + 0.03 * category + 0.03 * collection + 0.03 * document + 0.02 * team + 0.02 * entity + 0.02 * user + 0.02 * give
+LDA,10,10,8,0.07 * list + 0.04 * job + 0.04 * user + 0.03 * email + 0.03 * fetch + 0.03 * run + 0.02 * device + 0.02 * status + 0.02 * profile + 0.02 * invoice
+LDA,10,10,9,0.11 * create + 0.10 * update + 0.04 * account + 0.03 * report + 0.03 * historical + 0.03 * group + 0.03 * find + 0.03 * credit + 0.02 * summary + 0.02 * player
+LSA,10,5,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create
+LSA,10,5,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update
+LSA,10,5,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list
+LSA,10,5,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file
+LSA,10,5,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify
+LSA,10,5,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry
+LSA,10,5,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific
+LSA,10,5,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service
+LSA,10,5,8,0.60 * user + -0.57 * update + 0.21 * create + 0.17 * return + 0.15 * would
+LSA,10,5,9,0.50 * return + 0.43 * specify + 0.35 * give + 0.32 * retrieve + -0.25 * get
+LSA,10,6,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource
+LSA,10,6,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify
+LSA,10,6,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new
+LSA,10,6,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify
+LSA,10,6,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry
+LSA,10,6,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would
+LSA,10,6,6,0.47 * user + -0.36 * web + -0.34 * site + -0.33 * would + -0.30 * specific + -0.25 * deployment
+LSA,10,6,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify
+LSA,10,6,8,0.60 * user + -0.57 * update + 0.21 * create + 0.17 * return + 0.15 * would + -0.14 * delete
+LSA,10,6,9,-0.50 * return + -0.43 * specify + -0.35 * give + -0.32 * retrieve + 0.25 * get + 0.21 * user
+LSA,10,7,0,-0.80 * list + -0.33 * get + -0.22 * service + -0.18 * specify + -0.13 * create + -0.11 * resource + -0.11 * user
+LSA,10,7,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric
+LSA,10,7,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify
+LSA,10,7,3,0.69 * type + 0.52 * entry + -0.26 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment
+LSA,10,7,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create
+LSA,10,7,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric
+LSA,10,7,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get
+LSA,10,7,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get
+LSA,10,7,8,-0.60 * user + 0.57 * update + -0.21 * create + -0.17 * return + -0.15 * would + 0.14 * delete + 0.14 * get
+LSA,10,7,9,-0.50 * return + -0.43 * specify + -0.35 * give + -0.32 * retrieve + 0.25 * get + 0.21 * user + 0.17 * delete
+LSA,10,8,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric
+LSA,10,8,1,0.52 * list + -0.49 * create + -0.40 * service + -0.33 * get + -0.24 * update + -0.16 * specify + -0.15 * fabric + -0.11 * resource
+LSA,10,8,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric
+LSA,10,8,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot
+LSA,10,8,4,-0.71 * delete + 0.32 * service + -0.27 * user + -0.23 * type + -0.19 * specify + -0.18 * entry + 0.16 * create + -0.12 * would
+LSA,10,8,5,-0.52 * delete + -0.51 * service + 0.46 * get + 0.27 * type + 0.22 * entry + 0.13 * would + -0.11 * fabric + 0.10 * give
+LSA,10,8,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot
+LSA,10,8,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get + -0.14 * specific
+LSA,10,8,8,0.60 * user + -0.57 * update + 0.21 * create + 0.17 * return + 0.15 * would + -0.14 * delete + -0.14 * get + 0.13 * service
+LSA,10,8,9,0.50 * return + 0.43 * specify + 0.36 * give + 0.32 * retrieve + -0.25 * get + -0.21 * user + -0.17 * delete + 0.12 * value
+LSA,10,9,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group
+LSA,10,9,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new
+LSA,10,9,2,0.67 * create + -0.43 * get + 0.35 * update + -0.30 * service + 0.18 * list + 0.15 * new + -0.14 * specify + -0.12 * fabric + 0.07 * group
+LSA,10,9,3,-0.69 * type + -0.52 * entry + 0.27 * get + -0.26 * service + -0.12 * file + 0.11 * specify + 0.09 * deployment + 0.09 * slot + 0.09 * would
+LSA,10,9,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list
+LSA,10,9,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site
+LSA,10,9,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot + 0.16 * instance
+LSA,10,9,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get + -0.14 * specific + 0.11 * new
+LSA,10,9,8,0.60 * user + -0.57 * update + 0.21 * create + 0.17 * return + 0.15 * would + -0.14 * delete + -0.14 * get + 0.13 * service + -0.12 * specify
+LSA,10,9,9,-0.50 * return + -0.43 * specify + -0.35 * give + -0.32 * retrieve + 0.25 * get + 0.21 * user + 0.17 * delete + -0.12 * value + 0.10 * web
+LSA,10,10,0,0.80 * list + 0.33 * get + 0.22 * service + 0.18 * specify + 0.13 * create + 0.11 * resource + 0.11 * user + 0.10 * fabric + 0.09 * group + 0.08 * subscription
+LSA,10,10,1,-0.52 * list + 0.49 * create + 0.40 * service + 0.33 * get + 0.24 * update + 0.16 * specify + 0.15 * fabric + 0.11 * resource + 0.11 * new + 0.10 * delete
+LSA,10,10,2,-0.67 * create + 0.43 * get + -0.35 * update + 0.30 * service + -0.18 * list + -0.15 * new + 0.14 * specify + 0.12 * fabric + -0.07 * group + -0.07 * user
+LSA,10,10,3,0.69 * type + 0.52 * entry + -0.27 * get + 0.26 * service + 0.12 * file + -0.11 * specify + -0.09 * deployment + -0.09 * slot + -0.09 * would + -0.09 * user
+LSA,10,10,4,0.71 * delete + -0.32 * service + 0.27 * user + 0.23 * type + 0.19 * specify + 0.18 * entry + -0.16 * create + 0.12 * would + -0.11 * list + -0.10 * fabric
+LSA,10,10,5,0.52 * delete + 0.51 * service + -0.46 * get + -0.27 * type + -0.22 * entry + -0.13 * would + 0.11 * fabric + -0.10 * give + -0.09 * site + -0.09 * slot
+LSA,10,10,6,-0.47 * user + 0.36 * web + 0.34 * site + 0.33 * would + 0.30 * specific + 0.25 * deployment + -0.23 * get + 0.23 * slot + 0.16 * instance + 0.15 * scale
+LSA,10,10,7,-0.61 * update + -0.40 * user + 0.39 * create + 0.24 * delete + -0.22 * service + 0.19 * specify + 0.17 * get + -0.14 * specific + 0.11 * new + -0.10 * group
+LSA,10,10,8,0.60 * user + -0.58 * update + 0.21 * create + 0.17 * return + 0.15 * would + -0.14 * delete + -0.14 * get + 0.13 * service + -0.12 * specify + 0.11 * give
+LSA,10,10,9,-0.50 * return + -0.43 * specify + -0.36 * give + -0.32 * retrieve + 0.25 * get + 0.21 * user + 0.17 * delete + -0.12 * value + 0.10 * web + 0.10 * specific
+NMF,10,5,0,0.13 * specify + 0.10 * service + 0.06 * list + 0.04 * get + 0.04 * key
+NMF,10,5,1,0.18 * update + 0.10 * create + 0.06 * type + 0.06 * resource + 0.03 * new
+NMF,10,5,2,0.12 * service + 0.05 * specific + 0.03 * retrieve + 0.03 * fabric + 0.02 * facility
+NMF,10,5,3,0.07 * group + 0.05 * list + 0.05 * deployment + 0.05 * type + 0.04 * subscription
+NMF,10,5,4,0.20 * get + 0.04 * give + 0.04 * specify + 0.03 * name + 0.02 * resource
+NMF,10,5,5,0.24 * create + 0.06 * new + 0.02 * app + 0.02 * service + 0.01 * web
+NMF,10,5,6,0.27 * list + 0.09 * delete + 0.01 * return + 0.01 * available + 0.01 * job
+NMF,10,5,7,0.11 * user + 0.09 * retrieve + 0.05 * exist + 0.04 * would + 0.02 * account
+NMF,10,5,8,0.10 * would + 0.08 * update + 0.05 * image + 0.03 * give + 0.03 * return
+NMF,10,5,9,0.08 * account + 0.05 * file + 0.04 * information + 0.04 * detail + 0.04 * fabric
+NMF,10,6,0,0.13 * specify + 0.10 * service + 0.06 * list + 0.04 * get + 0.04 * key + 0.02 * subscription
+NMF,10,6,1,0.18 * update + 0.10 * create + 0.06 * type + 0.06 * resource + 0.03 * new + 0.03 * entry
+NMF,10,6,2,0.12 * service + 0.05 * specific + 0.03 * retrieve + 0.03 * fabric + 0.02 * facility + 0.02 * report
+NMF,10,6,3,0.07 * group + 0.05 * list + 0.05 * deployment + 0.05 * type + 0.04 * subscription + 0.04 * resource
+NMF,10,6,4,0.20 * get + 0.04 * give + 0.04 * specify + 0.03 * name + 0.02 * resource + 0.02 * delete
+NMF,10,6,5,0.24 * create + 0.06 * new + 0.02 * app + 0.02 * service + 0.01 * web + 0.01 * plan
+NMF,10,6,6,0.27 * list + 0.09 * delete + 0.01 * return + 0.01 * available + 0.01 * job + 0.01 * project
+NMF,10,6,7,0.11 * user + 0.09 * retrieve + 0.05 * exist + 0.04 * would + 0.02 * account + 0.02 * policy
+NMF,10,6,8,0.10 * would + 0.08 * update + 0.05 * image + 0.03 * give + 0.03 * return + 0.02 * specific
+NMF,10,6,9,0.08 * account + 0.05 * file + 0.04 * information + 0.04 * detail + 0.04 * fabric + 0.03 * get
+NMF,10,7,0,0.13 * specify + 0.10 * service + 0.06 * list + 0.04 * get + 0.04 * key + 0.02 * subscription + 0.02 * fabric
+NMF,10,7,1,0.18 * update + 0.10 * create + 0.06 * type + 0.06 * resource + 0.03 * new + 0.03 * entry + 0.02 * exist
+NMF,10,7,2,0.12 * service + 0.05 * specific + 0.03 * retrieve + 0.03 * fabric + 0.02 * facility + 0.02 * report + 0.02 * detailed
+NMF,10,7,3,0.07 * group + 0.05 * list + 0.05 * deployment + 0.05 * type + 0.04 * subscription + 0.04 * resource + 0.03 * user
+NMF,10,7,4,0.20 * get + 0.04 * give + 0.04 * specify + 0.03 * name + 0.02 * resource + 0.02 * delete + 0.02 * app
+NMF,10,7,5,0.24 * create + 0.06 * new + 0.02 * app + 0.02 * service + 0.01 * web + 0.01 * plan + 0.01 * site
+NMF,10,7,6,0.27 * list + 0.09 * delete + 0.01 * return + 0.01 * available + 0.01 * job + 0.01 * project + 0.01 * order
+NMF,10,7,7,0.11 * user + 0.09 * retrieve + 0.05 * exist + 0.04 * would + 0.02 * account + 0.02 * policy + 0.02 * domain
+NMF,10,7,8,0.10 * would + 0.08 * update + 0.05 * image + 0.03 * give + 0.03 * return + 0.02 * specific + 0.02 * delete
+NMF,10,7,9,0.08 * account + 0.05 * file + 0.04 * information + 0.04 * detail + 0.04 * fabric + 0.03 * get + 0.03 * find
+NMF,10,8,0,0.13 * specify + 0.10 * service + 0.06 * list + 0.04 * get + 0.04 * key + 0.02 * subscription + 0.02 * fabric + 0.02 * cluster
+NMF,10,8,1,0.18 * update + 0.10 * create + 0.06 * type + 0.06 * resource + 0.03 * new + 0.03 * entry + 0.02 * exist + 0.02 * add
+NMF,10,8,2,0.12 * service + 0.05 * specific + 0.03 * retrieve + 0.03 * fabric + 0.02 * facility + 0.02 * report + 0.02 * detailed + 0.02 * operation
+NMF,10,8,3,0.07 * group + 0.05 * list + 0.05 * deployment + 0.05 * type + 0.04 * subscription + 0.04 * resource + 0.03 * user + 0.03 * slot
+NMF,10,8,4,0.20 * get + 0.04 * give + 0.04 * specify + 0.03 * name + 0.02 * resource + 0.02 * delete + 0.02 * app + 0.02 * application
+NMF,10,8,5,0.24 * create + 0.06 * new + 0.02 * app + 0.02 * service + 0.01 * web + 0.01 * plan + 0.01 * site + 0.01 * job
+NMF,10,8,6,0.27 * list + 0.09 * delete + 0.01 * return + 0.01 * available + 0.01 * job + 0.01 * project + 0.01 * order + 0.01 * share
+NMF,10,8,7,0.11 * user + 0.09 * retrieve + 0.05 * exist + 0.04 * would + 0.02 * account + 0.02 * policy + 0.02 * domain + 0.02 * identifier
+NMF,10,8,8,0.10 * would + 0.08 * update + 0.05 * image + 0.03 * give + 0.03 * return + 0.02 * specific + 0.02 * delete + 0.02 * site
+NMF,10,8,9,0.08 * account + 0.05 * file + 0.04 * information + 0.04 * detail + 0.04 * fabric + 0.03 * get + 0.03 * find + 0.02 * service
+NMF,10,9,0,0.13 * specify + 0.10 * service + 0.06 * list + 0.04 * get + 0.04 * key + 0.02 * subscription + 0.02 * fabric + 0.02 * cluster + 0.01 * return
+NMF,10,9,1,0.18 * update + 0.10 * create + 0.06 * type + 0.06 * resource + 0.03 * new + 0.03 * entry + 0.02 * exist + 0.02 * add + 0.01 * network
+NMF,10,9,2,0.12 * service + 0.05 * specific + 0.03 * retrieve + 0.03 * fabric + 0.02 * facility + 0.02 * report + 0.02 * detailed + 0.02 * operation + 0.02 * application
+NMF,10,9,3,0.07 * group + 0.05 * list + 0.05 * deployment + 0.05 * type + 0.04 * subscription + 0.04 * resource + 0.03 * user + 0.03 * slot + 0.03 * site
+NMF,10,9,4,0.20 * get + 0.04 * give + 0.04 * specify + 0.03 * name + 0.02 * resource + 0.02 * delete + 0.02 * app + 0.02 * application + 0.02 * container
+NMF,10,9,5,0.24 * create + 0.06 * new + 0.02 * app + 0.02 * service + 0.01 * web + 0.01 * plan + 0.01 * site + 0.01 * job + 0.01 * specific
+NMF,10,9,6,0.27 * list + 0.09 * delete + 0.01 * return + 0.01 * available + 0.01 * job + 0.01 * project + 0.01 * order + 0.01 * share + 0.01 * contact
+NMF,10,9,7,0.11 * user + 0.09 * retrieve + 0.05 * exist + 0.04 * would + 0.02 * account + 0.02 * policy + 0.02 * domain + 0.02 * identifier + 0.02 * ownership
+NMF,10,9,8,0.10 * would + 0.08 * update + 0.05 * image + 0.03 * give + 0.03 * return + 0.02 * specific + 0.02 * delete + 0.02 * site + 0.02 * task
+NMF,10,9,9,0.08 * account + 0.05 * file + 0.04 * information + 0.04 * detail + 0.04 * fabric + 0.03 * get + 0.03 * find + 0.02 * service + 0.02 * node
+NMF,10,10,0,0.13 * specify + 0.10 * service + 0.06 * list + 0.04 * get + 0.04 * key + 0.02 * subscription + 0.02 * fabric + 0.02 * cluster + 0.01 * return + 0.01 * name
+NMF,10,10,1,0.18 * update + 0.10 * create + 0.06 * type + 0.06 * resource + 0.03 * new + 0.03 * entry + 0.02 * exist + 0.02 * add + 0.01 * network + 0.01 * run
+NMF,10,10,2,0.12 * service + 0.05 * specific + 0.03 * retrieve + 0.03 * fabric + 0.02 * facility + 0.02 * report + 0.02 * detailed + 0.02 * operation + 0.02 * application + 0.02 * information
+NMF,10,10,3,0.07 * group + 0.05 * list + 0.05 * deployment + 0.05 * type + 0.04 * subscription + 0.04 * resource + 0.03 * user + 0.03 * slot + 0.03 * site + 0.02 * event
+NMF,10,10,4,0.20 * get + 0.04 * give + 0.04 * specify + 0.03 * name + 0.02 * resource + 0.02 * delete + 0.02 * app + 0.02 * application + 0.02 * container + 0.01 * slot
+NMF,10,10,5,0.24 * create + 0.06 * new + 0.02 * app + 0.02 * service + 0.01 * web + 0.01 * plan + 0.01 * site + 0.01 * job + 0.01 * specific + 0.01 * get
+NMF,10,10,6,0.27 * list + 0.09 * delete + 0.01 * return + 0.01 * available + 0.01 * job + 0.01 * project + 0.01 * order + 0.01 * share + 0.01 * contact + 0.01 * task
+NMF,10,10,7,0.11 * user + 0.09 * retrieve + 0.05 * exist + 0.04 * would + 0.02 * account + 0.02 * policy + 0.02 * domain + 0.02 * identifier + 0.02 * ownership + 0.01 * web
+NMF,10,10,8,0.10 * would + 0.08 * update + 0.05 * image + 0.03 * give + 0.03 * return + 0.02 * specific + 0.02 * delete + 0.02 * site + 0.02 * task + 0.02 * key
+NMF,10,10,9,0.08 * account + 0.05 * file + 0.04 * information + 0.04 * detail + 0.04 * fabric + 0.03 * get + 0.03 * find + 0.02 * service + 0.02 * node + 0.02 * implement
