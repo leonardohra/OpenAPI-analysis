@@ -1,0 +1,124 @@
+spotify:
+
+path
+albums/get/
+description: [Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)
+
+albums/get/{id}
+description: [Get an Album](https://developer.spotify.com/web-api/get-album/)
+
+/albums/{id}/tracks
+description: [Get an Album's Tracks](https://developer.spotify.com/web-api/get-albums-tracks/)
+
+
+data_list = [ '[Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)', '[Get an Album](https://developer.spotify.com/web-api/get-album/)' (...)]
+
+
+gensim_model = Gensim_Model(data_list)
+gensim_model.preprocess()
+
+preprocess:
+'[Get Several Albums](https://developer.spotify.com/web-api/get-several-albums/)'
+tokenization: ['[', 'Get', 'Several', 'Albums', ']', '(', 'https' (...)]
+
+
+
+páragrafos para la 
+
+buscar nos sistematic mappings situacoes de problemas com toda essa nova situação de microserviços
+depois mostrar por que é necessário mostrar por que fazemos o que fazemos
+
+
+
+
+
+Leo: 
+We have 2000 APIs, for example languagetool.org has an API, its API has multiple endpoints
+If we count every existent endpoint in this openAPI dataset, there are 44038
+But we are analyzing two components: summary and description
+if we want to compare how these components describe one endpoint, we need to filter our endpoints to use only the ones that have summary and description
+If the endpoint only has description (or only has summary), if we use it in our comparison, it would be biased, therefore we are only going to use the endpoints that have description AND summary
+This reduces the amount of endpoints from 44038 to around 10000
+
+
+
+
+
+
+
+
+
+
+Fazer um plano de coisas baseado na tese de mestrado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rodrigo Pereira dos Santos10:15 AM
+Guillermo, pondría me informar cerca la fase que estamos?
+es para la interface?
+como 3rd reviewer
+un estudo con users?
+Guillermo Rodriguez10:27 AM
+https://www.sciencedirect.com/science/article/abs/pii/S0164121219300019
+Santiago Vidal10:42 AM
+latexdiff
+You10:46 AM
+Yo encuentre el paper que estaba decindo. Él usa el openAPI para hacer una sugestion de granularizacion de microservicios. Él usaba OpenAPI, una vez que microservicios generalmente son hechos con microservicios (y ellos ponen una referencia que dice eso). La referencia es Microservices Identification through Interface Analysis (el segundo paper de las nuestras referencias)  
+Rodrigo Pereira dos Santos10:48 AM
+https://www.sciencedirect.com/science/article/abs/pii/S0164121220302053
+https://www.sciencedirect.com/science/article/abs/pii/S0164121220302053
+https://ieeexplore.ieee.org/document/7796008
+Rodrigo Pereira dos Santos10:55 AM
+https://docs.google.com/document/d/1mefLthBaNwjAc4P1CS9Na3CMABdWwTt88mxpWzcBDYY/edit
+Santiago Vidal11:04 AM
+https://towardsdatascience.com/how-i-built-a-cannabis-recommendation-app-using-topic-models-and-latent-dirchlet-allocation-lda-999598987ded
+https://towardsdatascience.com/a-guide-to-collaborative-topic-modeling-recommender-systems-49fd576cc871
+Guillermo Rodriguez11:22 AM
+https://docs.google.com/document/d/1mefLthBaNwjAc4P1CS9Na3CMABdWwTt88mxpWzcBDYY/edit
+Rodrigo Pereira dos Santos11:22 AM
+https://docs.google.com/document/d/1mefLthBaNwjAc4P1CS9Na3CMABdWwTt88mxpWzcBDYY/edit#
+Claudia Marcos11:25 AM
+te muteas un segundo santi que no alcanzo a escuchar bien
+Santiago Vidal11:29 AM
+Peng, C., Goswami, P., & Bai, G. (2018). Fuzzy matching of OpenAPI described REST services. Procedia Computer Science, 126, 1313-1322.
+Santiago Vidal11:31 AM
+Jiang, B., Liu, P., Wang, Y., & Chen, Y. (2020). HyOASAM: A Hybrid Open API Selection Approach for Mashup Development. Mathematical Problems in Engineering, 2020.
+Guillermo Rodriguez11:47 AM
+https://www.researchgate.net/profile/Martin_Garriga/publication/337910839_Microservices_The_Evolution_and_Extinction_of_Web_Services/links/5e8365f992851c2f5270b8b2/Microservices-The-Evolution-and-Extinction-of-Web-Services.pdf
+Rodrigo Pereira dos Santos11:49 AM
+https://drive.google.com/drive/folders/12pLCCj1kU-UuLRsKk7M5MzTvJ6Zn-3UI
+Yo adicionei este articulo + master thesis (mi estudiante)
+You12:03 PM
+Yo puso los papers en las referencias. Pueden confirmar si son:
+3 Mapeamentos sistemáticos
+el paper hablando del microservice repository en github
+Rodrigo Pereira dos Santos12:04 PM
+Plenear el estudo
+the goal is...
+with the propose of...
+with respect to...
+in the point of view of...
+in the context of
+Check 3rd Evaluation - Maestria - user evaluation 

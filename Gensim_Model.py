@@ -28,43 +28,58 @@ from CustomEnumerators import TopicModelingAlgorithm, CoherenceType
 class Gensim_Model():
 
     __data_list = []
-    __data_tkzed = []
-    __data_stp = []
     __data_lemmatized = []
+    __id_to_orig_text = {}
     __corpus = []
     __id2_words = None
     __optimal_models = {}
     __best_par = []
     __df_topic_sents_keywords = None
+    __default_model = None
+    __nlp = None
 
-    def __init__(self, data_list):
+    def __init__(self, data_list, preprocessed_text = None):
         self.__data_list = data_list
 
-    def __sent_to_words(self, sentences):
-        for sentence in sentences:
-            yield(gensim.utils.simple_preprocess(str(sentence), deacc=True))  # deacc=True removes punctuations
+        self.__nlp = spacy.load('en') # load model with shortcut link "en"
+        print('Gensim model - spacy model loaded')
+        """https://spacy.io/api/annotation"""
+        self.__data_lemmatized = [self.__pre_process(dat) for dat in data_list]
+
+        print('Gensim model - data preprocessed')
+
+        self.__corpus = self.__vectorization(self.__data_lemmatized)
+        print('Gensim model - The corpus has {0} documents'.format(len(self.__corpus)))
+
+    def __sent_to_words(self, sentence):
+        # deacc=True removes punctuations
+        return gensim.utils.simple_preprocess(str(sentence), deacc=True)
 
     def __remove_stopwords(self, tokens):
         stop_words = stopwords.words('english')
-        return [[word for word in simple_preprocess(str(doc)) if word not in stop_words] for doc in tokens]
+        return [tk for tk in tokens if tk not in stop_words]
 
-    def __lemmatization(self, texts, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']):
-        nlp = spacy.load('en') # load model with shortcut link "en"
-        """https://spacy.io/api/annotation"""
-        texts_out = []
-        for sent in texts:
-            doc = nlp(" ".join(sent))
-            texts_out.append([token.lemma_ for token in doc if token.pos_ in allowed_postags])
-        return texts_out
+    def __lemmatization(self, text, deb = False):
+        text_out = []
+        doc = self.__nlp(" ".join(text))
 
-    def __get_id2word(self, data_lemmatized):
-        id2word = corpora.Dictionary(data_lemmatized)
+        if(deb):
+            print([(token.lemma_, token.pos_) for token in doc ])
 
-        return id2word
+        return [token.lemma_ for token in doc]
+
+    '''def __lemmatization_bak(self, text, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV'], deb = False):
+        text_out = []
+        doc = self.__nlp(" ".join(text))
+
+        if(deb):
+            print([(token.lemma_, token.pos_) for token in doc ])
+
+        return [token.lemma_ for token in doc if token.pos_ in allowed_postags]'''
 
     def __vectorization(self, data_lemmatized):
         # Create Dictionary
-        self.__id2_words = self.__get_id2word(data_lemmatized)
+        self.__id2_words = corpora.Dictionary(data_lemmatized)
         print('The dictionary has {0} tokens'.format(len(self.__id2_words.token2id)))
 
         # Create Corpus
@@ -75,32 +90,62 @@ class Gensim_Model():
 
         return corpus
 
-    def pre_processing(self):
-        self.__data_tkzed = list(self.__sent_to_words(self.__data_list))
-        print(self.__data_tkzed[0])
+    def __pre_process(self, text, deb=False):
+        data_tkzed = list(self.__sent_to_words(text))
+        data_stp = self.__remove_stopwords(data_tkzed)
+        data_lemmatized = self.__lemmatization(data_stp)
 
-        self.__data_tkzed = [[word.lower() for word in tks] for tks in self.__data_tkzed]
-        print(self.__data_tkzed[0])
+        if(deb):
+            print(data_tkzed)
+            print(data_stp)
+            print(data_lemmatized)
 
-        self.__data_stp = self.__remove_stopwords(self.__data_tkzed)
-        print(self.__data_stp[0])
+        return data_lemmatized
 
-        self.__data_lemmatized = self.__lemmatization(self.__data_stp, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV'])
-        print(self.__data_lemmatized[0])
+    def get_id2words(self):
+        return self.__id2_words
 
-        self.__corpus = self.__vectorization(self.__data_lemmatized)
-        print(self.__corpus[0])
-        print('The corpus has {0} documents'.format(len(self.__corpus)))
+    def get_corpus(self):
+        return self.__corpus
+
+    def id_to_endpoint(self, id):
+        return self.__id_to_orig_text[id]
+
+    def get_default_model(self):
+        return self.__default_model
+
+    def topics_for_new_text(self, text):
+        text_id2w = self.__id2_words.doc2bow(text)
+        text_to_tpcs = self.__default_model[text_id2w]
+        qtt_tpcs = self.__default_model.num_topics
+
+        id_to_tpc = []
+
+        for j in range(qtt_tpcs):
+            found = False
+            for elem in text_to_tpcs:
+                if(elem[0] == j):
+                    id_to_tpc.append([123456789, j, elem[1]])
+                    found = True
+            if(not found):
+                id_to_tpc.append([123456789, j, 0])
+
+        df2 = pd.DataFrame(id_to_tpc, columns=['id_sentence', 'topic_num', 'score'])
+
+        return df2
+
+
+    def pre_process_external(self, text):
+        lemmatized = self.__pre_process(text)
+        return lemmatized
 
     def __calculate_coherence(self, model, topn, coherence_type=CoherenceType.C_V):
         coherence_model = CoherenceModel(model=model, texts=self.__data_lemmatized, corpus=self.__corpus, dictionary=self.__id2_words, coherence=str(coherence_type), topn=topn)
         coherence = coherence_model.get_coherence()
-
         return coherence
 
     def __create_model(self, algo, topic_qtt):
         model = None
-
         if(algo == TopicModelingAlgorithm.LDA):
             model = LdaModel(corpus=self.__corpus, num_topics=topic_qtt, id2word=self.__id2_words, random_state=1)
         elif(algo == TopicModelingAlgorithm.LSA):
@@ -109,6 +154,10 @@ class Gensim_Model():
             model = Nmf(corpus=self.__corpus, num_topics=topic_qtt, random_state=1)
 
         return model
+
+    def set_default_model(self, algo, topic_qtt):
+        self.__default_model = self.__create_model(algo, topic_qtt)
+
 
     def model_construction_evaluation_topn(self, out_folder, out_file, algorithms = [TopicModelingAlgorithm.LDA, TopicModelingAlgorithm.LSA, TopicModelingAlgorithm.NMF], coherence_types = [ CoherenceType.U_MASS, CoherenceType.C_V, CoherenceType.C_UCI, CoherenceType.C_NPMI ], qtt_topics = range(1,21), topns = range(5,11)):
         all_values = {
@@ -173,6 +222,25 @@ class Gensim_Model():
 
         for topics in topics_all:
             w2.writerow(topics)
+
+    def endpoint_in_topics_dataset(self):
+        #id of endpoint, topic number, % in topic
+        id_to_tpc = []
+        qtt = self.__default_model.num_topics
+        lim = len(self.__corpus)
+        for i in range(lim):
+            tpcs = self.__default_model[self.__corpus[i]]
+            for j in range(qtt):
+                found = False
+                for elem in tpcs:
+                    if(elem[0] == j):
+                        id_to_tpc.append([i, j, elem[1]])
+                        found = True
+                if(not found):
+                    id_to_tpc.append([i, j, 0])
+            if(i % 1000 == 0):
+                print('{}/{}'.format(i, lim))
+        return id_to_tpc
 
     def __format_topics_sentences(self, coh_type = CoherenceType.C_V):
         ldamodel=self.__optimal_models[coh_type]

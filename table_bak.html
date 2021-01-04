@@ -1,0 +1,464 @@
+<style>
+    @import "https://fonts.googleapis.com/css?family=Montserrat:300,400,700";
+    .rwd-table {
+      margin: 1em 0;
+      min-width: 300px;
+    }
+    .rwd-table tr {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    .rwd-table th {
+      display: none;
+    }
+    .rwd-table td {
+      display: block;
+    }
+    .rwd-table td:first-child {
+      padding-top: .5em;
+    }
+    .rwd-table td:last-child {
+      padding-bottom: .5em;
+    }
+    .rwd-table td:before {
+      content: attr(data-th) ": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block;
+    }
+    @media (min-width: 480px) {
+      .rwd-table td:before {
+        display: none;
+      }
+    }
+    .rwd-table th, .rwd-table td {
+      text-align: left;
+    }
+    @media (min-width: 480px) {
+      .rwd-table th, .rwd-table td {
+        display: table-cell;
+        padding: .25em .5em;
+      }
+      .rwd-table th:first-child, .rwd-table td:first-child {
+        padding-left: 0;
+      }
+      .rwd-table th:last-child, .rwd-table td:last-child {
+        padding-right: 0;
+      }
+    }
+
+
+    h1 {
+      font-weight: normal;
+      letter-spacing: -1px;
+      color: #34495E;
+    }
+
+    .rwd-table {
+      background: #34495E;
+      color: #fff;
+      border-radius: .4em;
+      overflow: hidden;
+    }
+    .rwd-table tr {
+      border-color: #46637f;
+    }
+    .rwd-table th, .rwd-table td {
+      margin: .5em 1em;
+    }
+    @media (min-width: 480px) {
+      .rwd-table th, .rwd-table td {
+        padding: 1em !important;
+      }
+    }
+    .rwd-table th, .rwd-table td:before {
+      color: #dd5;
+    }
+    </style>
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+
+
+    <h1>Open API Analysis</h1>
+    <table class="rwd-table">
+    <tr>
+
+      <table class="rwd-table">
+    <tr>
+    <th>Topic</th>
+    <th>Topic Words</th>
+    <th>Endpoint</th>
+    <th>Score</th>
+    </tr>
+
+
+    
+    <tr>
+    <td data-th="Topic">0</td>
+    <td data-th="Topic Words">get, list, filter, give, service</td>
+    <td data-th="Endpoint">./APIs/1forge.com\0.0.1/quotes/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">0</td>
+    <td data-th="Topic Words">get, list, filter, give, service</td>
+    <td data-th="Endpoint">./APIs/azure.com\azsadmin-Quotas\2018-02-09/subscriptions/{subscriptionId}/providers/Microsoft.Compute.Admin/locations/{location}/quotas/{quotaName}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">0</td>
+    <td data-th="Topic Words">get, list, filter, give, service</td>
+    <td data-th="Endpoint">./APIs/azure.com\datashare-DataShare\2018-11-01-preview/providers/Microsoft.DataShare/locations/{location}/consumerInvitations/{invitationId}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">0</td>
+    <td data-th="Topic Words">get, list, filter, give, service</td>
+    <td data-th="Endpoint">./APIs/azure.com\datashare-DataShare\2018-11-01-preview/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/shareSubscriptions/{shareSubscriptionName}/ConsumerSourceDataSets/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">0</td>
+    <td data-th="Topic Words">get, list, filter, give, service</td>
+    <td data-th="Endpoint">./APIs/azure.com\datashare-DataShare\2018-11-01-preview/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/shareSubscriptions/{shareSubscriptionName}/dataSetMappings/{dataSetMappingName}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">1</td>
+    <td data-th="Topic Words">api, user, call, see, endpoint</td>
+    <td data-th="Endpoint">./APIs/agco-ats.com\v1/api/v2/AftermarketServices/Certificates/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">1</td>
+    <td data-th="Topic Words">api, user, call, see, endpoint</td>
+    <td data-th="Endpoint">./APIs/geodesystems.com\1.0.0/repository/entry/show/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">1</td>
+    <td data-th="Topic Words">api, user, call, see, endpoint</td>
+    <td data-th="Endpoint">./APIs/isendpro.com\1.1.1/repertoire/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">1</td>
+    <td data-th="Topic Words">api, user, call, see, endpoint</td>
+    <td data-th="Endpoint">./APIs/je-apis.com\2.0.0.0/baskets/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">1</td>
+    <td data-th="Topic Words">api, user, call, see, endpoint</td>
+    <td data-th="Endpoint">./APIs/neutrinoapi.net\3.4.5/ip-blocklist/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">2</td>
+    <td data-th="Topic Words">would, -PRON-, list, endpoint, request</td>
+    <td data-th="Endpoint">./APIs/geneea.com\1.0/s1/topic/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">2</td>
+    <td data-th="Topic Words">would, -PRON-, list, endpoint, request</td>
+    <td data-th="Endpoint">./APIs/azure.com\datashare-DataShare\2018-11-01-preview/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataShare/accounts/{accountName}/delete</td>
+    <td data-th="Score">0.9848981992768395</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">2</td>
+    <td data-th="Topic Words">would, -PRON-, list, endpoint, request</td>
+    <td data-th="Endpoint">./APIs/shutterstock.com\1.0.16/v2/contributors/{contributor_id}/collections/get</td>
+    <td data-th="Score">0.9822207627730289</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">2</td>
+    <td data-th="Topic Words">would, -PRON-, list, endpoint, request</td>
+    <td data-th="Endpoint">./APIs/neowsapp.com\1.0/rest/v1/neo/sentry/{asteroid_id}/get</td>
+    <td data-th="Score">0.9603485321922467</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">2</td>
+    <td data-th="Topic Words">would, -PRON-, list, endpoint, request</td>
+    <td data-th="Endpoint">./APIs/openfintech.io\2017-08-24/organizations/{id}/get</td>
+    <td data-th="Score">0.9600146512295318</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">3</td>
+    <td data-th="Topic Words">application, service, type, health, specify</td>
+    <td data-th="Endpoint">./APIs/ably.io\1.1.0/channels/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">3</td>
+    <td data-th="Topic Words">application, service, type, health, specify</td>
+    <td data-th="Endpoint">./APIs/azure.com\servicefabric\5.6/ApplicationTypes/$/Provision/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">3</td>
+    <td data-th="Topic Words">application, service, type, health, specify</td>
+    <td data-th="Endpoint">./APIs/azure.com\servicefabric\6.2.0.9/Applications/{applicationId}/$/SuspendBackup/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">3</td>
+    <td data-th="Topic Words">application, service, type, health, specify</td>
+    <td data-th="Endpoint">./APIs/azure.com\web-WebApps\2016-08-01/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/config/appsettings/put</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">3</td>
+    <td data-th="Topic Words">application, service, type, health, specify</td>
+    <td data-th="Endpoint">./APIs/gitlab.com\v3/v3/application/settings/put</td>
+    <td data-th="Score">0.9774484161856152</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">4</td>
+    <td data-th="Topic Words">field, information, group, provide, include</td>
+    <td data-th="Endpoint">./APIs/salesloft.com\v2/v2/custom_fields/{id}.json/delete</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">4</td>
+    <td data-th="Topic Words">field, information, group, provide, include</td>
+    <td data-th="Endpoint">./APIs/gov.bc.ca\geocoder\2.0.0/sites/{siteID}.{outputFormat}/get</td>
+    <td data-th="Score">0.9736481819588185</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">4</td>
+    <td data-th="Topic Words">field, information, group, provide, include</td>
+    <td data-th="Endpoint">./APIs/gov.bc.ca\geocoder\2.0.0/intersections/{intersectionID}.{outputFormat}/get</td>
+    <td data-th="Score">0.929880854371529</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">4</td>
+    <td data-th="Topic Words">field, information, group, provide, include</td>
+    <td data-th="Endpoint">./APIs/zoomconnect.com\1/api/rest/v1/sms/send/post</td>
+    <td data-th="Score">0.9156351218208979</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">4</td>
+    <td data-th="Topic Words">field, information, group, provide, include</td>
+    <td data-th="Endpoint">./APIs/avaza.com\v1/api/Timesheet/put</td>
+    <td data-th="Score">0.9075184031615091</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">5</td>
+    <td data-th="Topic Words">name, parameter, file, return, use</td>
+    <td data-th="Endpoint">./APIs/aviationdata.systems\v1/v1/airport/autocomplete/{airport_name}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">5</td>
+    <td data-th="Topic Words">name, parameter, file, return, use</td>
+    <td data-th="Endpoint">./APIs/aviationdata.systems\v1/v1/airport/iata/{airport_iata}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">5</td>
+    <td data-th="Topic Words">name, parameter, file, return, use</td>
+    <td data-th="Endpoint">./APIs/aviationdata.systems\v1/v1/airport/name/{airport_name}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">5</td>
+    <td data-th="Topic Words">name, parameter, file, return, use</td>
+    <td data-th="Endpoint">./APIs/aviationdata.systems\v1/v1/airport/nearest/{result_count}/{latitude}/{longitude}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">5</td>
+    <td data-th="Topic Words">name, parameter, file, return, use</td>
+    <td data-th="Endpoint">./APIs/azure.com\applicationinsights-swagger\2018-04-20/subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/components/{applicationName}/events/{eventType}/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">6</td>
+    <td data-th="Topic Words">account, true, boolean_admin, envelope, docusign</td>
+    <td data-th="Endpoint">./APIs/browshot.com\1.17.0/screenshot/host/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">6</td>
+    <td data-th="Topic Words">account, true, boolean_admin, envelope, docusign</td>
+    <td data-th="Endpoint">./APIs/d7networks.com\1.0.2/balance/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">6</td>
+    <td data-th="Topic Words">account, true, boolean_admin, envelope, docusign</td>
+    <td data-th="Endpoint">./APIs/data2crm.com\1/account/count/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">6</td>
+    <td data-th="Topic Words">account, true, boolean_admin, envelope, docusign</td>
+    <td data-th="Endpoint">./APIs/rebilly.com\2.1/paypal-accounts/{id}/deactivation/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">6</td>
+    <td data-th="Topic Words">account, true, boolean_admin, envelope, docusign</td>
+    <td data-th="Endpoint">./APIs/zoom.us\2.0.0/accounts/{accountId}/delete</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">7</td>
+    <td data-th="Topic Words">value, name, filter, user, search</td>
+    <td data-th="Endpoint">./APIs/geneea.com\1.0/s1/entities/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">7</td>
+    <td data-th="Topic Words">value, name, filter, user, search</td>
+    <td data-th="Endpoint">./APIs/geneea.com\1.0/s1/lemmatize/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">7</td>
+    <td data-th="Topic Words">value, name, filter, user, search</td>
+    <td data-th="Endpoint">./APIs/ijenko.net\3.0.0/functionalities/{functionalityId}/attributes/{attributeName}/put</td>
+    <td data-th="Score">0.9953896017962354</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">7</td>
+    <td data-th="Topic Words">value, name, filter, user, search</td>
+    <td data-th="Endpoint">./APIs/whapi.com\sessions\2.0.0/tickets/{tgt}/delete</td>
+    <td data-th="Score">0.9584863670030974</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">7</td>
+    <td data-th="Topic Words">value, name, filter, user, search</td>
+    <td data-th="Endpoint">./APIs/je-apis.com\2.0.0.0/orders//post</td>
+    <td data-th="Score">0.9438618733477774</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">8</td>
+    <td data-th="Topic Words">node, file, add, link, folder</td>
+    <td data-th="Endpoint">./APIs/azure.com\batch-BatchService\2018-12-01.8.0/pools/{poolId}/nodes/{nodeId}/reboot/post</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">8</td>
+    <td data-th="Topic Words">node, file, add, link, folder</td>
+    <td data-th="Endpoint">./APIs/geneea.com\1.0/s1/sentiment/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">8</td>
+    <td data-th="Topic Words">node, file, add, link, folder</td>
+    <td data-th="Endpoint">./APIs/sportsdata.io\csgo-v3-scores\1.0/{format}/Areas/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">8</td>
+    <td data-th="Topic Words">node, file, add, link, folder</td>
+    <td data-th="Endpoint">./APIs/azure.com\batch-BatchService\2019-06-01.9.0/pools/{poolId}/nodes/{nodeId}/reboot/post</td>
+    <td data-th="Score">0.9995469204897456</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">8</td>
+    <td data-th="Topic Words">node, file, add, link, folder</td>
+    <td data-th="Endpoint">./APIs/linode.com\4.5.0/nodebalancers/{nodeBalancerId}/configs/{configId}/rebuild/post</td>
+    <td data-th="Score">0.9942301209081184</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">9</td>
+    <td data-th="Topic Words">request, status, delete, return, create</td>
+    <td data-th="Endpoint">./APIs/botify.com\1.0.0/analyses/{username}/{project_slug}/{analysis_slug}/features/pagerank/lost/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">9</td>
+    <td data-th="Topic Words">request, status, delete, return, create</td>
+    <td data-th="Endpoint">./APIs/bunq.com\1.0/user/{userID}/monetary-account/{monetary-accountID}/ideal-merchant-transaction/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">9</td>
+    <td data-th="Topic Words">request, status, delete, return, create</td>
+    <td data-th="Endpoint">./APIs/bunq.com\1.0/user/{userID}/monetary-account/{monetary-accountID}/sofort-merchant-transaction/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">9</td>
+    <td data-th="Topic Words">request, status, delete, return, create</td>
+    <td data-th="Endpoint">./APIs/code-scan.com\1.0.0/job/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">9</td>
+    <td data-th="Topic Words">request, status, delete, return, create</td>
+    <td data-th="Endpoint">./APIs/epa.gov\dfr\0.0.0/dfr_rest_services.get_cwa_3yr_compliance/get</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">10</td>
+    <td data-th="Topic Words">key, return, object, contain, link</td>
+    <td data-th="Endpoint">./APIs/linode.com\4.5.0/profile/sshkeys/{sshKeyId}/put</td>
+    <td data-th="Score">1.0</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">10</td>
+    <td data-th="Topic Words">key, return, object, contain, link</td>
+    <td data-th="Endpoint">./APIs/azure.com\keyvault\2016-10-01/keys/{key-name}/{key-version}/verify/post</td>
+    <td data-th="Score">0.9552687774780674</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">10</td>
+    <td data-th="Topic Words">key, return, object, contain, link</td>
+    <td data-th="Endpoint">./APIs/linode.com\4.5.0/profile/sshkeys/get</td>
+    <td data-th="Score">0.9508586717802585</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">10</td>
+    <td data-th="Topic Words">key, return, object, contain, link</td>
+    <td data-th="Endpoint">./APIs/azure.com\keyvault\2016-10-01/keys/restore/post</td>
+    <td data-th="Score">0.9469497226398704</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">10</td>
+    <td data-th="Topic Words">key, return, object, contain, link</td>
+    <td data-th="Endpoint">./APIs/adafruit.com\2.0.0/{username}/feeds/{feed_key}/get</td>
+    <td data-th="Score">0.9424226839942088</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">11</td>
+    <td data-th="Topic Words">use, true, account, create, boolean_admin</td>
+    <td data-th="Endpoint">./APIs/reverb.com\3.0/shop/vacation/delete</td>
+    <td data-th="Score">0.9175690216759312</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">11</td>
+    <td data-th="Topic Words">use, true, account, create, boolean_admin</td>
+    <td data-th="Endpoint">./APIs/d7networks.com\1.0.2/sendbatch/post</td>
+    <td data-th="Score">0.9163668395219029</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">11</td>
+    <td data-th="Topic Words">use, true, account, create, boolean_admin</td>
+    <td data-th="Endpoint">./APIs/datumbox.com\1.0/1.0/SentimentAnalysis.json/post</td>
+    <td data-th="Score">0.8478350782706967</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">11</td>
+    <td data-th="Topic Words">use, true, account, create, boolean_admin</td>
+    <td data-th="Endpoint">./APIs/bunq.com\1.0/user/{userID}/monetary-account/{monetary-accountID}/export-rib/{itemId}/delete</td>
+    <td data-th="Score">0.8475456042932088</td>
+    </tr>
+    <tr>
+    <td data-th="Topic">11</td>
+    <td data-th="Topic Words">use, true, account, create, boolean_admin</td>
+    <td data-th="Endpoint">./APIs/azure.com\vmwarecloudsimple\2019-04-01/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.VMwareCloudSimple/virtualMachines/{virtualMachineName}/stop/post</td>
+    <td data-th="Score">0.8466285937220915</td>
+    </tr>
+
+
+    </table>
